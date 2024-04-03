@@ -1,0 +1,109 @@
+.pricePageContainer {
+    text-align: center;
+    
+}
+.pricePageContainer h1 {
+    margin: 30px;
+}
+
+h5 {
+    font-size: 1.5em;
+    margin: .25em;
+}
+h4 {
+    font-size: 2em;
+    margin: .25em;
+}
+
+h6 {
+  
+    font-size: 1.25em;
+    margin: 10px;
+   
+}
+.hero {
+    display: block;
+}
+.priceBoxes {
+    display: flex;
+    text-align: center;
+    height: 70%;
+    justify-content: center;
+}
+
+.priceBox {
+    position: relative;
+    width: 30%;
+    height: auto;
+    border: .5px solid #3c3c3c;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, .2) 0px -1px 7px 1px;
+    margin: 10px;
+    text-align: center;
+    text-wrap: wrap;
+}
+
+.priceBox h5 {
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+.priceBox h6 {
+    margin: 10px;
+    padding: 10px
+    
+}
+
+.priceBox p {
+    text-align: center;
+    font-size: 1.25em;
+    padding: 5px;
+    font-weight: 700;
+    
+    
+}
+
+.priceBox button {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 20px 30px;
+    width: 50%;
+    color: white;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 1em;
+    
+}
+ul {
+    padding: 0px;
+    margin-bottom: 90px;
+}
+
+ul li {
+    list-style-type: none;
+    line-height: 2.2;
+    font-weight: 400;
+}
+
+.teamsPrice {
+    border: 1px solid #3c3c3c;
+    box-shadow: rgba(0, 0, 0, .2) 0px -1px 7px 1px;
+    border-radius: 10px;
+    width: 40%;
+    height: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4em;
+    margin-bottom: 4em;
+
+}
+.teamsPrice p {
+    font-size: 18px;
+}
+
+.comparePlans {
+    margin-top: 2em;
+}
+

@@ -1,0 +1,21 @@
+.hero {
+    width: 100%;
+    text-align: center;
+    margin: 10px auto;
+}
+.leftSide {
+    width: 50%;
+}
+.rightSide {
+    width: 50%;
+}
+
+@media screen and(max-width:1000px){
+    .hero{
+        display: flex;
+        flex-direction: column;
+    }
+    .belowTheFold h4{
+        width: 95%;
+    }
+}

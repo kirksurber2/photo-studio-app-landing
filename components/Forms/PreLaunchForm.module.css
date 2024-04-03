@@ -1,0 +1,26 @@
+
+
+.form {
+    
+    width: clamp(250px, 25%, 400px);
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(0, 0, 0, .17) 0px 2px 7px 1px;
+    border-radius: 15px;
+    padding: 1em;
+
+}
+
+.form input {
+    width: 95%;
+    padding: .5em;
+    margin: .5em;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+    .form {
+        width: 75vw;
+        justify-content: center;
+    }
+}

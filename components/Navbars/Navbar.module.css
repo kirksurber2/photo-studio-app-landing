@@ -1,0 +1,61 @@
+.navbar {
+    display: flex;
+    padding: 10px 20px;
+    box-shadow: 0px 5px 7px 3px rgba(0, 0, 0, .17);
+    
+}
+.navbar a {
+    margin: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-decoration: none;
+}
+.navbar a:nth-child(2) {
+    margin-left: auto;
+}
+.navbar a:nth-last-child(3) {
+    margin-left: auto;
+    
+}
+.navbar button {
+    scale: .65;
+    margin-left: auto;
+    font-size: 20px;
+}
+
+.mobileNavBar {
+    display: flex;
+    flex-direction: column;
+
+}
+.mobileNavBar a {
+    margin: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-decoration: none;
+    text-align: center;
+}
+.mobileNavBar a:nth-child(2){
+    margin-left: auto;
+    margin-right: auto;
+}
+.mobileNavBar a:nth-last-child(1) {
+    margin-left: auto;
+}
+.mobileNavBar button {
+    scale: .65;
+}
+
+@media screen and (max-width: 1000px){
+    .navbar {
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar a {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px;
+    }
+    
+}

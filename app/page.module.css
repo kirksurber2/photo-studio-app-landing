@@ -1,0 +1,18 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  
+  min-height: 100vh;
+}
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+}
+.leftSide {
+  width: 50%;
+}
+.rightSide {
+  width: 50%;
+}

@@ -1,0 +1,156 @@
+.body {
+    display: flex;
+}
+.hero {
+    
+    display: flex;
+    border: 0px ;   
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px 5px rgba(0, 0, 0, .15);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    
+}
+
+.hero form {
+    width: 50%;
+}
+.hero button {
+    border-radius: 15px;
+    box-shadow: 0px 1px 10px 5px rgba(0, 0, 0, .15);
+    text-wrap: nowrap;
+    text-align: center;
+    width: 50%;
+}
+.hero p {
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px
+}
+.leftImageContainer {
+    position: relative;
+}
+.leftImageContainer img{
+    position: absolute;
+    top: -30px;
+    left: 10px;
+    scale: .6;
+    
+}    
+.heroText {
+    width: 50%;
+    
+}
+.thankYou {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.dealBox {
+    display: flex;
+    border: 0px;
+    border-radius: 15px;
+    width: 450px;
+    box-shadow: 0px 1px 10px 5px rgba(0, 0, 0, .15);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.dealBox button {
+    width: 150px;
+}
+.timelineArea {
+    text-align: center;
+    margin-top: 20px;
+}
+.timelineContainer {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 10px;
+    justify-content: center;
+}
+.timelineBox {
+    border: 1px solid #3c3c3c;
+    border-radius: 15px;
+    box-shadow: 0px 1px 10px 5px rgba(0, 0, 0, .15);
+    margin: 10px;
+    width: 30%;
+
+}
+.timelineBox p {
+    margin-top: 5px;
+    padding: 2px;
+}
+
+.featureLink {
+    position: relative;
+    bottom: 10px;
+    
+}
+
+@media only screen and (max-width: 1000px){
+    .body {
+        width: 100%;
+    }
+    .hero {
+        justify-content: center;
+        flex-direction: column-reverse;
+        margin: 10px;
+        width: 95vw;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .heroText {
+        width: 95%;
+    }
+    .heroText h1 {
+        font-size: 24px;
+    }
+    .heroText h4 {
+        font-size: 20px;
+    }
+    .leftImageContainer {
+        margin: 10px;
+    }
+    .leftImageContainer img {
+        margin: 0;
+    }
+    .hero button {
+        width: 75vw;
+        text-wrap: nowrap;
+    }
+    .leftImageContainer img {
+        scale: 1.5;
+        margin-top: 75px;
+    }
+    .dealBox {
+        flex-direction: column-reverse;
+        width: 70%;
+    }
+    .timelineContainer {
+        display: flex;
+    }
+    .timelineBox {
+        width: 45%;
+
+    }
+    .timelineBox h4 {
+        font-size: 20px;
+    }
+    .timelineBox h6 {
+        font-size: 18px;
+    }
+    .thankYou h1 {
+        font-size: 24px;
+        margin: 10px;
+    }
+
+}

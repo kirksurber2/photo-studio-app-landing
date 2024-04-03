@@ -1,0 +1,159 @@
+
+.hero {
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5em;
+}
+.hero p {
+    font-size: 2em;
+    
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    margin: 2em;
+}
+
+.benefitBox {
+    height: 17em;
+    width: 17em;
+    box-shadow: rgba(0, 0, 0, .2) 0px -1px 7px 1px;
+    border-radius: 15px;
+    margin: 10px;
+
+}
+.iconImage {
+    margin-top: 10px;
+}
+
+.benefitBox h5 {
+    font-size: 1.75em;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.benefitBox p {
+    font-size: 1.25em;
+    padding: 10px;
+}
+.featureArea {
+    display: flex;
+    flex-wrap: wrap;
+   align-self: center;
+   margin: 10px;
+   justify-content: center;
+   
+}
+.featureSection {
+    position: relative;
+    margin: 10px;
+    border: 1px solid #3c3c3c;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, .8) 0px 2px 7px ;
+    max-width: 200px;
+    min-width: 150px;
+    height: 150px;
+    min-height: 175px;
+    align-self: center;
+        
+}
+.featureSection h5 {
+    margin: 10px;
+}
+
+.featureSection p {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+.featureSection img {
+    
+    margin: 0px;
+    
+}
+
+.featureSectionHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:  center;
+    background-color: #281c4b;
+    color: white;
+    border-radius: 14px 14px 0px 0px;
+    height: 70px;
+    transition: .5s;
+    
+}
+.featureSection:hover {
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(to right, darkblue, darkorchid) border-box;
+    
+    border: 4px solid transparent;
+  }
+
+.whoWeAre {
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, .8) 0px 2px 7px ;
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    margin: 10px;
+
+    
+}
+
+.whoWeAreTitle {
+    font-size: 38px;
+    font-weight: 700;
+    padding-top: 20px;
+}
+.team {
+    display: flex;
+    margin: 10px;
+}
+.teamPhoto {
+    width: 30%;
+    border-radius: 15px;
+}
+.teamPhoto img {
+    border-radius: 15px;
+    width: 200px;
+}
+.teamDescription {
+    margin: 10px;
+    width: 45%;
+}
+.missionArea{
+    display: flex;
+    justify-content: center;
+}
+.mission {
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, .8) 0px 2px 7px ;
+    width: 30%;
+    justify-content: center;
+    border-radius: 15px;
+    margin: 10px;
+}
+.mission p {
+    padding: 10px;
+}
+.owner {
+    display: flex;
+}
+.ownerPhoto {
+    width: 30%;
+}
+.ownerDescription {
+    width: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.ownerPhoto img {
+    border-radius: 15px;
+    width: 200px;
+}
