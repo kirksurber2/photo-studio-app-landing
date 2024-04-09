@@ -1,29 +1,45 @@
 'use client'
 import { useState } from 'react'
 import styles from './RefferalForm.module.css'
-
+import { useRouter } from 'next/navigation'
 
 
 
 export default function ReferralForm() {
-
+    const navigation = useRouter()
     const [referral, setReferral] = useState({
-        email: "", referralEmail: "", referralPhone: ""
+        email: "", referralEmail: "", referralPhone: "", address: ""
     })
-    const [address, setAddress] = useState('')
+    
     const [errors, setErrors] = useState('')
 
     function handleChange(e) {
         setReferral(prev => ({...prev, [e.target.name]: e.target.value}))
     }
 
-    function handleReferralSubmit(e) {
-        e.preventDefault()
-        if(address !== "") {
-            navigate('/')
+    async function handleReferralSubmit(e) {
+        e.preventDefault();
+        
+        try {
+            const res = await fetch('/api/marketing/referral', {
+                method: "POST",
+                headers: { "Content-Type": 'application/json' },
+                body: JSON.stringify(referral)
+            });
+            console.log(res)
+            if (!res.ok) {
+                const errorBody = await res.json(); // Assuming the server sends back a JSON with error details
+                throw new Error(`HTTP error! status: ${res.status}, Message: ${errorBody.message}`);
+            }
+    
+            console.log("Form Submitted Successfully");
+            navigation.push('/thank-you'); // Fixed router usage
+        } catch (error) {
+            console.error('Error submitting the form:', error.message);
+            setErrors(error.message); // Assuming you want to display errors to the user
         }
     }
-
+    
 
     return(
         <div>
@@ -58,16 +74,16 @@ export default function ReferralForm() {
             <input 
                 type='text'
                 placeholder='Address'
-                name='Address'
-                value={address}
+                name='address'
+                value={referral.address}
                 hidden={true}
-                onChange={(e) => setAddress(e.target.value)}
+                onChange={handleChange}
             
             ></input>
             <button>Submit</button>
         </form>
           {errors !== "" &&
-            <p>{errors}</p>
+            <p className={styles.errors}>{errors}</p>
           }
             
         </div>

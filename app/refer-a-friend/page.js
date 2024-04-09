@@ -6,7 +6,7 @@ export default function ReferPage() {
 
     return (
         <div>
-            <Image src={logo} width={350} style={{marginTop: '20px'}}/>
+            <Image src={logo} width={350} style={{marginTop: '20px'}} alt='logo'/>
             <div className={styles.hero}>
                 
                     <h1>Refer a Friend Program</h1>

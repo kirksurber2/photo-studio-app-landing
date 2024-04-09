@@ -9,6 +9,15 @@
 .rightSide {
     width: 50%;
 }
+.belowTheFold{
+    text-align: center;
+    margin: 10px auto;
+}
+.belowTheFold h4 {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 @media screen and(max-width:1000px){
     .hero{

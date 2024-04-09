@@ -1,50 +1,56 @@
 'use client'
 import styles from './PreLaunchForm.module.css'
-import { useState } from 'react'
-import axios from 'axios'
+import { useState, useEffect, useRef } from 'react'
+import { useRouter } from 'next/navigation'
+
 
 function PreLaunchForm(props) {
-
+    const navigation =useRouter()
+    const [mounted, setMounted] = useState(false)
     const [user, setUser] = useState ({
         firstName: "",
         lastName: "",
         phone: "",
         email: "",
-        tag:{title: "Pre-Launch waitlist"}, 
+        tag: {title: "Pre-Launch waitlist"}, 
         test: ""
         
-    }
-    )
+    })
+    const [error, setError] = useState([])
     function handleFormChange(e) {
         setUser(prevUser => ({...prevUser, [e.target.name]: e.target.value}))
         
     }
-    async function handleSubmit(req, res) {
-        e.preventDefault();
-        try {
-            const response = await axios.post('/api/waitlist', {
-              headers: {
-                'Content-Type': 'application/json',
-              },
-            });
+    async function handleSubmit(e)  {
+        e.preventDefault()
         
+     try{
+         const res = await fetch('/api/marketing/waitlist', {
+             method: "POST",
+             headers: {"Content-Type": 'application/json'},
+             body: JSON.stringify(user)
+            })
             
-            console.log(response.data)
-            res.status(200).json(response.data)
-          } 
-          catch (error) {
-            // Handle network errors
-            console.error('Network error:', error);
-          }
+            if(!res.ok){
+                throw new Error(`HTTP error! status: ${res.status}`)
+            }
+            console.log("Form Submitted Successfully")
+            navigation.push('/pre-launch-special')
         }
+        catch(error){
+            console.error('Error submitting the form:', error.message)
+        }
+    }
+   
     
-    
- 
+    useEffect(() => {
+        setMounted(true)
+    },[])
 
 
-    return (
+    return ( mounted && (
         <div className={styles.form}>
-            <form  onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} method='POST'>
                 <input 
                 type="text"
                 name="firstName"
@@ -97,10 +103,14 @@ function PreLaunchForm(props) {
                 hidden={true}
                 >
                 </input>
+                <div className={styles.errorMessages}>
+                    <div>Error Message</div>
+                </div>
                 <button>Submit</button>
             </form>
         </div>
     )
+)   
 }
 
 export default PreLaunchForm

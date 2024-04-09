@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import Navbar from '../components/Navbars/Navbar'
-import styles from '../assets/styles/home.module.css'
+import styles from './globals.css'
 import Image from 'next/image'
 import PreLaunchForm from '@/components/Forms/PreLaunchForm'
 import connectDB from '@/config/database'
@@ -20,99 +20,99 @@ export default function HomePage() {
             
 
 
-            <div className={styles.body}>
-              <div className={styles.hero}>
-                <div className='leftSide'>
+            <div className={'body'}>
+              <div className={'hero'}>
+                <div className={'leftSide'}>
                   <h1>Schedule, Photograph, Collect, Plan</h1>
                   <p>Save time by simplifying your business</p>
                 </div>
-                <div className='rightSide'>
-                  <Image src={calendarOnPhone} width={'auto'}height={250} alt='Phone with yearly calendar'/>
+                <div className={'rightSide' }>
+                  <Image src={calendarOnPhone} width={'auto'} height={300}alt='Phone with yearly calendar'/>
                 </div> 
               </div>   
             
-            <div className={styles.computerTextHolder}>
-                <div className={`${styles.computerText} ${styles.box}`}>
+            <div className={'computerTextHolder'}>
+                <div className={`computerText box`}>
                     <h4>Work Anywhere</h4>
                     <p >Keep important info handy - client info, session location, SMS, all in one spot</p>
                 </div>
-                <div className={`${styles.computerText} ${styles.box}`}>
+                <div className={`computerText box`}>
                     <h4>REMEMBER EVERYTHING</h4>
                     <p >Keep important info handy - client info, session location, SMS, all in one spot</p>
                 </div>
-                <div className={`${styles.computerText} ${styles.box}`}>
+                <div className={`computerText box`}>
                     <h4>TURN TO-DO INTO DONE</h4>
                     <p >Keep important info handy - client info, session location, SMS, all in one spot</p>
                 </div>
-                <div className={`${styles.computerText} ${styles.box}`}>
+                <div className={`computerText box`}>
                     <h4>FIND THINGS FAST</h4>
                     <p >Keep important info handy - client info, session location, SMS, all in one spot</p>
                 </div>
             </div>
             
-            <div className={styles.stayInformed}>
+            <div className={'stayInformed'}>
                 <h2>Stay informed on our PRE-LAUNCH!</h2>
                 <PreLaunchForm />               
             </div>
-            <div className={styles.features}>
-                <div className={styles.featuresHeader}>
+            <div className={'features'}>
+                <div className={'featuresHeader'}>
                     <h2>Make Taking Care of Your Clients Easier</h2>
                 </div>
-                <div className={styles.feature}>
-                    <h2 className={styles.featureName}>Contact Forms</h2>
-                    <p className={styles.featureDescription}>Collecting Leads is the first service any program should have for a photographer or videographer.  Capture as many as you can</p>
+                <div className={'feature'}>
+                    <h2 className={'featureName'}>Contact Forms</h2>
+                    <p className={'featureDescription'}>Collecting Leads is the first service any program should have for a photographer or videographer.  Capture as many as you can</p>
                 </div>
-                <div className={styles.feature}>
-                    <h2 className={styles.featureName}>Workflows</h2>
-                    <p className={styles.featureDescription}>As photographers ourselves, we have a million items on our plate, worrying about a workflow now isn't one of them</p>
+                <div className={'feature'}>
+                    <h2 className={'featureName'}>Workflows</h2>
+                    <p className={'featureDescription'}>As photographers ourselves, we have a million items on our plate, worrying about a workflow now isn't one of them</p>
                 </div>
-                <div className={styles.feature}>
-                    <h2 className={styles.featureName}>Invoicing</h2>
-                    <p className={styles.featureDescription}>Ditch the exposure crap, get paid for the work you do and don't put them on your calendar until they have committed.  </p>
+                <div className={'feature'}>
+                    <h2 className={'featureName'}>Invoicing</h2>
+                    <p className={'featureDescription'}>Ditch the exposure crap, get paid for the work you do and don't put them on your calendar until they have committed.  </p>
                 </div>
-                <div className={styles.feature}>
-                    <h2 className={styles.featureName}>Messaging</h2>
-                    <p className={styles.featureDescription}>Trying to dig for numbers is a thing of the past, quickly send messages to your clients while you are out getting other tasks done.</p>
+                <div className={'feature'}>
+                    <h2 className={'featureName'}>Messaging</h2>
+                    <p className={'featureDescription'}>Trying to dig for numbers is a thing of the past, quickly send messages to your clients while you are out getting other tasks done.</p>
                 </div>
-                <div className={styles.feature}>
-                    <h2 className={styles.featureName}>Management</h2>
-                    <p className={styles.featureDescription}>Finding "little Susie's Mom has never been easier not to mention seeing where they are at in the workflow to track what you need to get done for them.</p>
+                <div className={'feature'}>
+                    <h2 className={'featureName'}>Management</h2>
+                    <p className={'featureDescription'}>Finding "little Susie's Mom has never been easier not to mention seeing where they are at in the workflow to track what you need to get done for them.</p>
                 </div>                  
             </div>
-            <div className={styles.buyersJourney}>
-                <div className={styles.journeySteps}>
-                    <div className={styles.journeyStep}>
+            <div className={'buyersJourney'}>
+                <div className={'journeySteps'}>
+                    <div className={'journeyStep box'}>
                         <h2>New Lead</h2>
-                        <p className={styles.featureDescription}>Boom!  A new lead just hit your website and loves what you do.  They're reaching out and now it's time to move them forward.</p>
+                        <p className={'featureDescription'}>Boom!  A new lead just hit your website and loves what you do.  They're reaching out and now it's time to move them forward.</p>
                     </div>
-                    <div className={styles.journeyStep}>
+                    <div className={'journeyStep box'}>
                         <h2>Schedule a Consultation</h2>
                         <p>Whether it's in person, phone, or video chat, get them on the books sooner rather than later. </p>
-                    <div className={styles.motionItem}>
+                    <div className={'motionItem'}>
                         Add image here
                     </div>
                 </div>
-                    <div className={styles.journeyStep}>
+                    <div className={'journeyStep box'}>
                         <h2>Send a "Soft" Product Info </h2>
                         <p >It's never too early to start embedding product ideas in your clients mind.  Get them thinking about prints and wall art right away</p>
                     </div>
-                    <div className={styles.journeyStep}>
+                    <div className={'journeyStep box'}>
                         <h2>Quote/Invoice/Contract</h2>
                         <p>Get Paid!  This doesn't need to be a multiple step process, that's why we make it seemless for your client.</p>
                     </div>
-                    <div className={styles.journeyStep}>
+                    <div className={'journeyStep box'}>
                         <h2>Schedule Session</h2>
                         <p>Easily schedule a clients session, plan their shoot location, automatically send out wardrobe ideas and best practicess.</p>
                     </div>
-                    <div className={styles.journeyStep}>
+                    <div className={'journeyStep box'}>
                         <h2>Build Your Relationship</h2>
                         <p>Customer Service is more important than ever.  Use our pre-designed SMS notifications, emails and push notifications to remind your clients.  Do a quick review/adjustment before they go out.</p>
                     </div>
-                    <div className={styles.journeyStep}>
+                    <div className={'journeyStep box'}>
                         <h2>After the Session</h2>
                         <p>Get that pricing sheet out after the session is completed.  Not to mention time frames and what to expect for coming up IPS/Sales session  </p>
                     </div>
-                    <div className={styles.journeyStep}>
+                    <div className={'journeyStep box'}>
                         <h2>Sell/Nurture/Repeat</h2>
                         <p>Clients and leads are scored so you can send proper messages to the proper client based on their activity.
                         </p>

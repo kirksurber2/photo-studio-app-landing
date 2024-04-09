@@ -17,6 +17,10 @@
     margin: .5em;
     border-radius: 5px;
 }
+.errorMessages {
+    color: firebrick;
+    font-weight: 600;
+}
 
 @media screen and (max-width: 1000px) {
     .form {
