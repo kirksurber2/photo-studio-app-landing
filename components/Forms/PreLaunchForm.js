@@ -104,7 +104,7 @@ function PreLaunchForm(props) {
                 >
                 </input>
                 <div className={styles.errorMessages}>
-                    <div>Error Message</div>
+                    <div>{error}</div>
                 </div>
                 <button>Submit</button>
             </form>
