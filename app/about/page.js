@@ -1,7 +1,7 @@
 import Navbar from '../../components/Navbars/Navbar'
 import Image from 'next/image'
 import Link from 'next/link'
-import styles from  '../../assets/styles/about.module.css'
+import styles from  './about.module.css'
 import PaperPlane from '../../assets/images/svg/PaperPlane.svg'
 import kirkSurberHeadshot from '../../assets/images/images/KSheadshot.jpg'
 import { MdTimelapse } from "react-icons/md";
@@ -51,7 +51,7 @@ export default function About () {
                     <p className={styles.whoWeAreTitle}>We're Photographers Too!</p>
                     <div className={styles.team}>
                         <div className={styles.teamPhoto}>
-                            <Image></Image>
+                            
                             <h4>We're currently building our Team!</h4>
                         </div>
                         <div className={styles.teamDescription}>
@@ -94,7 +94,7 @@ export default function About () {
                     <p className={styles.whoWeAreTitle}>Veteran Owned, Dog Lover, Dad</p>
                     <div className={styles.owner}>
                         <div className={styles.ownerPhoto}>
-                            <Image alt='Owner Photo' src={kirkSurberHeadshot}></Image>
+                            <Image alt='Owner Photo' src={kirkSurberHeadshot} width={200} height={'auto'}></Image>
                         </div>
                         <div className={styles.ownerDescription}>
                             <p>I have built this app to help me with my own photography business.  I got tired of using applications to run my business.  CRM's or Client Management tools were a pain and often so generalized I needed something for photographers.  So Photo Studio App was born. </p>

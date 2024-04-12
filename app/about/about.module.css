@@ -42,9 +42,9 @@
 .featureArea {
     display: flex;
     flex-wrap: wrap;
-   align-self: center;
-   margin: 10px;
-   justify-content: center;
+    align-self: center;
+    margin: 10px;
+    justify-content: center;
    
 }
 .featureSection {
@@ -148,6 +148,9 @@
 .ownerPhoto {
     width: 30%;
 }
+.ownerPhoto img {
+    scale: .75
+}
 .ownerDescription {
     width: 50%;
     margin-top: auto;
@@ -156,4 +159,62 @@
 .ownerPhoto img {
     border-radius: 15px;
     width: 200px;
+}
+
+@media screen and (max-width: 1000px) {
+    .hero{
+        display: flex;
+        flex-direction: column;
+        text-wrap: wrap;
+        width: 100vw;
+    }
+    .box{
+        display: flex;
+        flex-direction: column;
+    }
+    .whoWeAre {
+        width: 97vw;
+        
+    }
+    .whoWeAre p {
+        width: 95%;
+    }
+    .team {
+        display: flex;
+        flex-direction: column;
+        margin: 10px auto;
+    }.team p{
+        width: 95%
+    }
+    .teamPhoto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .teamDescription {
+        width: 95%;
+    }
+  
+    .ownerPhoto{
+        display: flex;
+        flex-direction: column;
+        margin: 10px auto;
+    }
+    .missionArea {
+        display: flex;
+        flex-direction: column;
+    }
+    .mission {
+        width: 95%;
+    }
+    .owner {
+        display: flex;
+        flex-direction: column;
+    }
+    .ownerDescription  {
+        width: 95%;
+    }
+    .ownerDescription p {
+        width: 95%;
+        margin: 10px auto;
+    }
 }
