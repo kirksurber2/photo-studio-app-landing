@@ -55,9 +55,9 @@ export default function About () {
                             <h4>We're currently building our Team!</h4>
                         </div>
                         <div className={styles.teamDescription}>
-                            <p>As a photographer myself, some of the biggest issues I had was having to dig into my client management (CRM) to find my next session coming up.  </p>
+                            <p>As a photographer myself, the biggest issues I had was finding client info in a CRM to find my next session.</p>
                             <br/>
-                            <p>Having shot weddings, headshots, seniors and families, keeping track of everything was vital and couldn't find it easily.  We all have a million items to accomplish.  Dealing with an app shouldn't be difficult. </p>
+                            <p>Keeping track of everything is vital and I needed simplicity.  We all have a million items to accomplish.  Dealing with an app shouldn't be difficult. </p>
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@ export default function About () {
                         <p className={styles.whoWeAreTitle}>Goals</p>
                         
                         <div className={styles.missionDescription}>
-                            <p>Our mission is to make an app for photographers who run sessions, sales, and need time to market their business, not worry about what widget to use.</p>
+                            <p>Make a simple and easy to use app for photographers.  Sessions, Sales, and need time to market their business, not worry about what widget to use.</p>
                             <br/>
                             <p><strong>Simple, easy to use, intuitive</strong></p>
                         </div>
@@ -97,7 +97,7 @@ export default function About () {
                             <Image alt='Owner Photo' src={kirkSurberHeadshot} width={200} height={'auto'}></Image>
                         </div>
                         <div className={styles.ownerDescription}>
-                            <p>I have built this app to help me with my own photography business.  I got tired of using applications to run my business.  CRM's or Client Management tools were a pain and often so generalized I needed something for photographers.  So Photo Studio App was born. </p>
+                            <p>I have built this app to help me with my own photography business.  I got tired of multiple applications to run my business.  CRM's or Client Management tools were a pain and often so generalized I needed something for photographers.  So Photo Studio App was born. </p>
                             
                             
                         </div>
