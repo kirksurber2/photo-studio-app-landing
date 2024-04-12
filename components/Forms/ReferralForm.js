@@ -21,7 +21,7 @@ export default function ReferralForm() {
         e.preventDefault();
         
         try {
-            const res = await fetch(`${process.env.URL}/api/marketing/referral`, {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/marketing/referral`, {
                 method: "POST",
                 headers: { "Content-Type": 'application/json' },
                 body: JSON.stringify(referral)
