@@ -12,7 +12,7 @@ export default function LoadingPage({ loading }) {
         <PulseLoader 
             color='#4361ee'
             
-            size={150}
+            size={50}
             margin={2}
             loading={true}
             speedMultiplier={.5}

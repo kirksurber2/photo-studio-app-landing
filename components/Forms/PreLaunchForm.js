@@ -25,7 +25,7 @@ function PreLaunchForm(props) {
         e.preventDefault()
         
      try{
-         const res = await fetch(`${process.env.URL}/api/marketing/waitlist`, {
+         const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/marketing/waitlist`, {
              method: "POST",
              headers: {"Content-Type": 'application/json'},
              body: JSON.stringify(user)
