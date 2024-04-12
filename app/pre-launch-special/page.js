@@ -14,7 +14,7 @@ export default function PreLaunchSpecialPage() {
     return(
         <div className={styles.display}>
             <div className={styles.offer}>
-            <Image src={logo} width={250}/>
+            <Image src={logo} width={250} alt='logo photo'/>
                 <h1>Interested in a deal?</h1>
                 <div className={styles.offerSub}>
                     <h4>Pre-Purchase a Year Subscription Now and Save!</h4>
