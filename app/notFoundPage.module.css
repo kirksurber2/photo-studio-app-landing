@@ -1,0 +1,22 @@
+
+.infoBox {
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 15px;
+    box-shadow: 0px 2px 7px 12px rgba(0, 0, 0, .12);
+    width: 50%;
+    height: 50%;
+    margin: 100px auto;
+}
+.infoBox button {
+    width: 90%;
+}
+.infoBox h4 {
+    width: 90%;
+    text-align: center;
+    margin: 20px auto;
+}
+.infoBox p {
+    width: 90%;
+    text-align: center;
+    margin: 10px auto;
+}
