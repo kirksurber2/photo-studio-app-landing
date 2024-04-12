@@ -1,5 +1,5 @@
 import '@/app/globals.css'
-import AuthProvider from '@/components/authProvider/AuthProvider'
+
 import Head from 'next/head'
 
 export const metadata = {
@@ -16,7 +16,7 @@ export const metadata = {
 export default function MainLayout({ children }) {
 
     return (
-         <AuthProvider>
+         
             <html lang="en">
                 <Head>
                  <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -28,6 +28,6 @@ export default function MainLayout({ children }) {
                     </main>
                 </body>
             </html>
-         </AuthProvider>
+         
     )
 }
