@@ -5,6 +5,7 @@ import Marketing from '@/models/marketing'
 
 export async function POST(req, res) {
     try {
+      const origin = req.headers.get('origin')
       await connectDB();
       
       // Assuming the request body is JSON, use req.json() instead of req.formData()
@@ -41,11 +42,10 @@ export async function POST(req, res) {
       // Successfully saved the new lead
       return new Response(JSON.stringify({message: 'Success'}), {status: 200,
         headers: {
-          'Access-Control-Allow-Origin': origin,
-          
+          'Allow-Control-Allow-Origin': origin, 
+          'Content-Type': 'application/json'
         }
-      }
-      )
+      })
     } catch (error) {
       console.error(error);
       return new Response(JSON.stringify({message: "Failed to add to waitlist"}), {status: 500});
