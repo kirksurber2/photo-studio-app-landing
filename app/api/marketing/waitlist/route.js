@@ -3,9 +3,10 @@ import connectDB from '@/config/database'
 import Marketing from '@/models/marketing'
 
 
-export async function POST(req) {
+export async function POST(req, res) {
     try {
       await connectDB();
+      
       // Assuming the request body is JSON, use req.json() instead of req.formData()
       const userData = await req.json();
   
@@ -38,7 +39,13 @@ export async function POST(req) {
       await newLead.save();
   
       // Successfully saved the new lead
-      return new Response(JSON.stringify({message: 'Success'}), {status: 200});
+      return new Response(JSON.stringify({message: 'Success'}), {status: 200,
+        headers: {
+          'Access-Control-Allow-Origin': origin,
+          
+        }
+      }
+      )
     } catch (error) {
       console.error(error);
       return new Response(JSON.stringify({message: "Failed to add to waitlist"}), {status: 500});
