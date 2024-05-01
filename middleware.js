@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
  
-const allowedOrigins = ['https://photostudioapp.com/', 'https://www.photostudioapp.com/']
+const allowedOrigins = ['https://photostudioapp.com', 'https://www.photostudioapp.com']
  
 const corsOptions = {
   'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
