@@ -5,7 +5,7 @@ import styles from './globals.css'
 import Image from 'next/image'
 import PreLaunchForm from '@/components/Forms/PreLaunchForm'
 import connectDB from '@/config/database'
-
+import UnderConstructionModal from '@/components/Modal/UnderConstruction/UnderConstructionModal'
 import calendarPhoto from '../assets/images/images/calendar.jpg'
 import calendarOnPhone from '../assets/images/images/calendarOnPhone.jpg'
 import computer from '../assets/images/images/computer.png'
@@ -15,7 +15,7 @@ export default function HomePage() {
 
     return (
         <div className={styles.container}>
-            
+            <UnderConstructionModal />
             <Navbar className={styles.navbar} />
             
 

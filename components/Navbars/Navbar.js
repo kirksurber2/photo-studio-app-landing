@@ -54,8 +54,11 @@ import { FaGoogle, FaRegBell } from 'react-icons/fa'
                 </div> */}
             
            
-            
-            
+            <Link href={'https://app.photostudioapp.com'}>
+                <button>
+                    Login
+                </button>
+            </Link>
         </div>
         
     )
