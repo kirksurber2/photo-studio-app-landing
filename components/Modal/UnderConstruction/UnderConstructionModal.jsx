@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import styles from './UnderConstructionModal.module.css';
 import axios from 'axios';
-import ReactLoading from 'react-loading';
+// import ReactLoading from 'react-loading';
 
 export default function UnderConstructionModal() {
   const [email, setEmail] = useState('');
@@ -43,7 +43,8 @@ export default function UnderConstructionModal() {
         {!submitted ? (
           <form onSubmit={handleSubmit} className={styles.form}>
             {loading ? (
-              <ReactLoading type="spin" color="#000000" height={30} width={30} />
+              // <ReactLoading type="spin" color="#000000" height={30} width={30} />
+              <p>Loading...</p>
             ) : (
               <input
                 type="email"
