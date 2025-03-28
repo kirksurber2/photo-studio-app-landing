@@ -39,7 +39,8 @@
     gap: 15px;
   }
   
-  input[type="email"] {
+  
+ .form input[type="email"] {
     padding: 12px 16px;
     width: 80%;
     border-radius: 10px;
