@@ -1,15 +1,34 @@
-'use client'
+'use client';
 import { useState } from 'react';
 import styles from './UnderConstructionModal.module.css';
+import axios from 'axios';
+import ReactLoading from 'react-loading';
 
 export default function UnderConstructionModal() {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: Hook up to your API or mailing list logic
-    setSubmitted(true);
+    setLoading(true);
+
+    try {
+      await axios.post(
+        `${process.env.NEXT_PUBLIC_MARKETING_API}/new-lead`,
+        { email },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+      setSubmitted(true);
+    } catch (error) {
+      console.error('Error submitting email:', error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -23,14 +42,20 @@ export default function UnderConstructionModal() {
 
         {!submitted ? (
           <form onSubmit={handleSubmit} className={styles.form}>
-            <input
-              type="email"
-              placeholder="you@example.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <button type="submit">Notify Me</button>
+            {loading ? (
+              <ReactLoading type="spin" color="#000000" height={30} width={30} />
+            ) : (
+              <input
+                type="email"
+                placeholder="you@example.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            )}
+            <button type="submit" disabled={loading}>
+              {loading ? 'Submitting...' : 'Notify Me'}
+            </button>
           </form>
         ) : (
           <p className={styles.thankYou}>✅ Thank you! We'll be in touch soon.</p>
