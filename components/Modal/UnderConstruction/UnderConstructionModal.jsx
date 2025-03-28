@@ -15,7 +15,7 @@ export default function UnderConstructionModal() {
 
     try {
       await axios.post(
-        `${process.env.NEXT_PUBLIC_MARKETING_API}/new-lead`,
+        `${process.env.NEXT_PUBLIC_MARKETING_API}/marketing/new-lead`,
         { email },
         {
           headers: {
