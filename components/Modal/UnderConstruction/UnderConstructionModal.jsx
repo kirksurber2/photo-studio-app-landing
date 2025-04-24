@@ -38,6 +38,9 @@ export default function UnderConstructionModal() {
         <p>
           Session tracking, custom workflows, pre-built templates (workflows and sms/email), client scheduling, galleries and Stripe integration all in 1
         </p>
+        <p>
+          Our Training Videos and Documents are Currently in Production.
+        </p>
         <p>If you’d like more information, drop your email below and we’ll reach out!</p>
 
         {!submitted ? (
