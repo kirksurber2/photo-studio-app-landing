@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .video,
+  .text {
+    flex: 1 1 50%;
+  }
+  
+  .video video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .text h4 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #222;
+  }
+  
+  .text p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .reverse {
+    flex-direction: row-reverse;
+  }
+  
