@@ -34,9 +34,9 @@ export default function UnderConstructionModal() {
   return (
     <div className={styles.overlay}>
       <div className={styles.modal}>
-        <h1>🚧 We're Under Construction</h1>
+        <h1>Launching May 9th</h1>
         <p>
-          We’re improving the security and scalability of our application to protect our users and their clients' privacy and safety.
+          Session tracking, custom workflows, pre-built templates (workflows and sms/email), client scheduling, galleries and Stripe integration all in 1
         </p>
         <p>If you’d like more information, drop your email below and we’ll reach out!</p>
 
