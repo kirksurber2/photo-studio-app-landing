@@ -31,6 +31,7 @@ import { FaGoogle, FaRegBell } from 'react-icons/fa'
 
             <Link href='/about'>About</Link>
             <Link href='/features'>Features</Link>
+            <Link href='/training'>Training</Link>
             <Link href='/refer-a-friend'>Refer-a-Friend</Link>
             
             
@@ -54,7 +55,7 @@ import { FaGoogle, FaRegBell } from 'react-icons/fa'
                 </div> */}
             
            
-            <Link href={'https://app.photostudioapp.com'}>
+            <Link href={'https://app.photostudioapp.com/login'}>
                 <button>
                     Login
                 </button>
