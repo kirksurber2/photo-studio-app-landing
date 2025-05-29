@@ -1,0 +1,48 @@
+.training-categories {
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+  }
+
+  .training-card {
+    display: block;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    text-decoration: none;
+    color: inherit;
+    max-width: 340px;
+  }
+
+  .training-card:hover {
+    transform: scale(1.03);
+  }
+
+  .card-image {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+  }
+  /* .card-info {
+
+  } */
+
+  .card-title {
+    padding: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    background: #fff;
+  }

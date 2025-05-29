@@ -34,7 +34,7 @@ export default function UnderConstructionModal() {
   return (
     <div className={styles.overlay}>
       <div className={styles.modal}>
-        <h1>Launching May 9th</h1>
+        <h1>Launching June 2nd</h1>
         <p>
           Session tracking, custom workflows, pre-built templates (workflows and sms/email), client scheduling, galleries and Stripe integration all in 1
         </p>
