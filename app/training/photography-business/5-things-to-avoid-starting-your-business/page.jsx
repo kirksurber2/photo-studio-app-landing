@@ -27,7 +27,7 @@ export default function FiveThingsToAvoid() {
                 <p>Instead: here are several options for you to use</p>
                 <div>
                     <h3>Alternate Option 1: Exchange Value</h3>
-                    <p>Grab your pricing sheet (if you don't have one, do not pass go, go directly to <Link>pricing</Link>) to figure the value of their ask</p>
+                    <p>Grab your pricing sheet (if you don't have one, do not pass go, go directly to <Link href="/">pricing</Link>) to figure the value of their ask</p>
                     <div>
                         <p style={{textAlign: 'center', width: '50%'}}><i>If and only if you believe in what they are doing and you find value in it, you can do this for free however there is a better option, exchange value for their offer</i></p>
                     </div>
