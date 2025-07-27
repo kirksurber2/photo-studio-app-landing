@@ -31,9 +31,9 @@ import { FaGoogle, FaRegBell } from 'react-icons/fa'
 
             <Link href='/about'>About</Link>
             <Link href='/features'>Features</Link>
-            <Link href='/training'>Learn Photography</Link>
-            <Link href='/training'>Learn Business</Link>
-            <Link href='/training'>Learn Facebook Ads</Link>
+            <Link href='/learn-photography'>Learn Photography</Link>
+            <Link href='/learn-photography-business'>Learn Business</Link>
+            <Link href='/learn-facebook'>Learn Facebook Ads</Link>
             <Link href='/refer-a-friend'>Refer-a-Friend</Link>
             
             
