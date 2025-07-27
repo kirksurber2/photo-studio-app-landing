@@ -52,7 +52,7 @@ export default function HomePage() {
             
             <div className={'stayInformed'}>
                 <h2>Stay informed on our PRE-LAUNCH!</h2>
-                <PreLaunchForm />               
+                             
             </div>
             <div className={'features'}>
                 <div className={'featuresHeader'}>
@@ -156,7 +156,7 @@ export default function HomePage() {
                                 <button>Get Training Now</button>
 
                 </div>     */}
-                <PreLaunchForm/>
+                
             </div>
                 
                 

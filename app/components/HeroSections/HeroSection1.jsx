@@ -2,7 +2,7 @@ import styles from './HeroSection.module.css'
 
 
 
-export default function HeroSection1(title, description, imageUrl,  ) {
+export default function HeroSection1({title, description, imageUrl } ) {
 
     return(
         <div className='heroSection' style={{backgroundImage: `url(${imageUrl})`}}>
