@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import  Link  from 'next/link'
 //import { signIn, signOut, useSession, getProviders} from 'next-auth/react'
 import Image from 'next/image'
-import logo from '../../assets/images/images/logoBlack-200.png'
+import logo from '../../../assets/images/images/logoBlack-200.png'
 import styles from '../../components/Navbars/Navbar.module.css'
 import { LuUserCircle2, LuMenu } from "react-icons/lu";
 import { FaGoogle, FaRegBell } from 'react-icons/fa'
