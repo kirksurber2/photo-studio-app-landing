@@ -11,7 +11,7 @@ export default function FiveThingsToAvoid() {
                 <h1>5 Things to Avoid Starting Your Photography Business</h1>
                 <p>A Lessons Learned Tip</p>
             </div>
-            {/* <BlogIntroSection 
+            <BlogIntroSection 
                 title="Every Photographers Mistakes"
                 intro="Lessons Learned from Photographers Everywhere" 
                 point1="Exposure" 
@@ -19,7 +19,7 @@ export default function FiveThingsToAvoid() {
                 point3="New Gear" 
                 point4="Pricing" 
                 point5="Knowing Which Tasks Make You Money"
-            /> */}
+            />
             <div>
                 <h2>"It will be great Exposure"</h2>
                 <p>A <strong><u>HUGE mistake</u></strong> to take this</p>
