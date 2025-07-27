@@ -1,11 +1,11 @@
-import styles from '../training.module.css'
+import styles from '../trainingSection.module.css'
 import Link from 'next/link'
 
 
 export default function LinkCard({url, imageUrl, title, description, mainPoints}){
     return(
-        <Link href={`${url}`} className={styles.training-card}>
-            <div className="card-image" style={{ backgroundImage: `url(${imageUrl})` }} />
+        <Link href={`${url}`} className={styles.trainingCard}>
+            <div className="cardImage" style={{ backgroundImage: `url(${imageUrl})` }} />
             <div>
                 <h3>{title}</h3>
                 <ul>

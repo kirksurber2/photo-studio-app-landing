@@ -1,26 +1,35 @@
 import TrainingSection from './components/TrainingSection'
 import Link from 'next/link'
-import './training.module.css'
+import styles from './training.module.css' // ✅ make sure this is a default import, not a CSS import
 
 export default function TrainingPage() {
   return (
     <>
-      <section className="training-categories">
-        <h2 className="section-title">Explore Training Categories</h2>
-        <div className="card-grid">
-          <Link href="/training/photography" className="training-card">
-            <div className="card-image" style={{ backgroundImage: `url(/images/training-photography.jpg)` }} />
-            <div className="card-title">Photography Training</div>
+      <section className={styles.trainingCategories}>
+        <h2 className={styles.sectionTitle}>Explore Training Categories</h2>
+        <div className={styles.cardGrid}>
+          <Link href="/training/photography" className={styles.trainingCard}>
+            <div
+              className={styles.cardImage}
+              style={{ backgroundImage: `url(/images/training-photography.jpg)` }}
+            />
+            <div className={styles.cardTitle}>Photography Training</div>
           </Link>
 
-          <Link href="/training/photography-business" className="training-card">
-            <div className="card-image" style={{ backgroundImage: `url(/images/training-business.jpg)` }} />
-            <div className="card-title">Photography Business</div>
+          <Link href="/training/photography-business" className={styles.trainingCard}>
+            <div
+              className={styles.cardImage}
+              style={{ backgroundImage: `url(/images/training-business.jpg)` }}
+            />
+            <div className={styles.cardTitle}>Photography Business</div>
           </Link>
 
-          <Link href="/training/photo-studio-app" className="training-card">
-            <div className="card-image" style={{ backgroundImage: `url(/images/training-app.jpg)` }} />
-            <div className="card-title">Photo Studio App Training</div>
+          <Link href="/training/photo-studio-app" className={styles.trainingCard}>
+            <div
+              className={styles.cardImage}
+              style={{ backgroundImage: `url(/images/training-app.jpg)` }}
+            />
+            <div className={styles.cardTitle}>Photo Studio App Training</div>
           </Link>
         </div>
       </section>
@@ -37,8 +46,6 @@ export default function TrainingPage() {
         description="Watch how we helped real clients achieve their goals."
         reverse
       />
-
-   
     </>
   )
 }

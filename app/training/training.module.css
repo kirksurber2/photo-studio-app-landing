@@ -4,24 +4,24 @@
 }
 
 
-.training-categories {
+.trainingCategories {
     padding: 3rem 1rem;
     text-align: center;
   }
 
-  .section-title {
+  .sectionTitle {
     font-size: 2rem;
     margin-bottom: 2rem;
   }
 
-  .card-grid {
+  .cardGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     justify-items: center;
   }
 
-  .training-card {
+  .trainingCard {
     display: block;
     border-radius: 15px;
     overflow: hidden;
@@ -32,11 +32,11 @@
     max-width: 340px;
   }
 
-  .training-card:hover {
+  .trainingCard:hover {
     transform: scale(1.03);
   }
 
-  .card-image {
+  .cardImage {
     width: 100%;
     height: 180px;
     background-size: cover;
@@ -46,7 +46,7 @@
 
   } */
 
-  .card-title {
+  .cardTitle {
     padding: 1rem;
     font-size: 1.25rem;
     font-weight: 600;
