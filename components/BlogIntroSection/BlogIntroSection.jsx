@@ -1,6 +1,5 @@
 
-
-export default function BlogIntroSection (title, intro, point1, point2, point3, point4, point5){
+export default function BlogIntroSection ({title, intro, point1, point2, point3, point4, point5}){
 
     return(
         <div className="intro">
