@@ -1,5 +1,5 @@
 
-import Navbar from "../../components/Navbars/Navbar";
+import Navbar from "../components/Navbars/Navbar";
 import styles from  './features.module.css'
 
 export default function Features () {

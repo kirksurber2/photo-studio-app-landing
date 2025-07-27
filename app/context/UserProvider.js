@@ -1,47 +1,36 @@
-import React from 'react'
-import { useState, createContext } from 'react'
-import axios from 'axios'
+// context/AuthContext.js
+import { createContext, useState, useEffect } from 'react'
 
+const AuthContext = createContext()
 
-export const UserContext = createContext({})
+export const UserProvider = ({ children }) => {
+  const [user, setUser] = useState(null)
+  const [token, setToken] = useState('')
+  const [error, setError] = useState(null)
 
-export default function UserProvider ({children}) {
-    children: React.ReactNode
-    const [userState, setUserState] = useState({
-        user: {}, 
-        token: "",
-        
-    })
+  const register = async (userData) => {
+    console.log('register user:', userData)
+  }
 
-    function signup(credentials) {
-        axios.post('/auth/signup', credentials)
-            .then(res => console.log(res))
-            .catch(err => console.log(err))
-    }
+  const login = async ({ email, password }) => {
+    console.log('login user:', email, password)
+  }
 
-    function login(credentials) {
-        axios.post('/auth/login', credentials)
-            .then(res => console.log(res))
-            .catch(err => console.log(err))
-    }
-    function logout() {
-        console.log("logout")
-    }
-    function checkUser() {
-        console.log('user Check')
-    }
+  const logout = async () => {
+    console.log('logout')
+  }
 
-    return (
-        <UserContext.Provider
-            value = {{
-                ...userState,
-                signup,
-                login
+  const checkUser = async () => {
+    console.log('check user')
+  }
 
-            }}
-        >
-            {children}
-
-        </UserContext.Provider>
-    )
+  return (
+    <AuthContext.Provider
+      value={{ user, token, error, register, login, logout, checkUser }}
+    >
+      {children}
+    </AuthContext.Provider>
+  )
 }
+
+export default UserProvider

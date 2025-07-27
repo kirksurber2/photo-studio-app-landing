@@ -1,7 +1,7 @@
 import styles from './referFriend.module.css'
 import Image from 'next/image'
 import logo from '../../assets/images/images/logoBlack-250.png'
-import ReferralForm from '../../components/Forms/ReferralForm'
+import ReferralForm from '../components/Forms/ReferralForm'
 export default function ReferPage() {
 
     return (

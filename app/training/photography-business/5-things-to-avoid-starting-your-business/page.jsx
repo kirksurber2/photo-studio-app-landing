@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import styles from '../../training.module.css'
-import BlogIntroSection from '@/components/BlogIntroSection/BlogIntroSection'
+import BlogIntroSection from '@/app/components/BlogIntroSection/BlogIntroSection'
 
 
 export default function FiveThingsToAvoid() {

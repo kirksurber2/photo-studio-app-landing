@@ -1,4 +1,4 @@
-import Navbar from '../../components/Navbars/Navbar'
+import Navbar from '../components/Navbars/Navbar'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from  './about.module.css'

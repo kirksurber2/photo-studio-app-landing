@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import styles from '../../training.module.css'
-import HeroSection1 from '../../../../components/HeroSections/HeroSection1'
-import BlogIntroSection from '@/components/BlogIntroSection/BlogIntroSection'
-import SubscriptionCTA from '@/components/SubscriptionCTA/SubscriptionCTA'
+import HeroSection1 from '../../../components/HeroSections/HeroSection1'
+import BlogIntroSection from '@/app/components/BlogIntroSection/BlogIntroSection'
+import SubscriptionCTA from '@/app/components/SubscriptionCTA/SubscriptionCTA'
 import TrainingSection from '../../components/TrainingSection'
 
 export default function PhotographyBusinessByTheNumbers() {
