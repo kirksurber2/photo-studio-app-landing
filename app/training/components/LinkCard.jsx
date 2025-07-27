@@ -1,4 +1,4 @@
-import styles from '../trainingSection.module.css'
+import styles from './TrainingSection.module.css'
 import Link from 'next/link'
 
 
