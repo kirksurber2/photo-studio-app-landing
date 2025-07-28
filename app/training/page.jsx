@@ -1,8 +1,15 @@
-import TrainingSection from './components/TrainingSection'
-import Link from 'next/link'
-import logo from '../../assets/images/images/logoBlack-250.png'
-import calendar from '../../assets/images/images/calendar'
-import styles from './training.module.css' 
+import TrainingSection from './components/TrainingSection';
+import Link from 'next/link';
+import logo from '../../assets/images/images/logoBlack-250.png';
+import calendar from '../../assets/images/images/calendar.png'; // <-- Make sure this is correct
+import styles from './training.module.css';
+
+// SEO Metadata
+export const metadata = {
+  title: 'Photography Training | Photo Studio App',
+  description: 'Explore free photography training for mastering your camera, running your business, using Photo Studio App, and creating Facebook ads that convert.',
+  keywords: 'photography training, photo studio app training, photography business, facebook ads for photographers, photography education, business leadership'
+};
 
 export default function TrainingPage() {
   return (
@@ -21,7 +28,7 @@ export default function TrainingPage() {
           <Link href="/training/photography-business" className={styles.trainingCard}>
             <div
               className={styles.cardImage}
-              style={{ backgroundImage: `url(${calendar})}` }}
+              style={{ backgroundImage: `url(${calendar})` }}
             />
             <div className={styles.cardTitle}>Photography Business</div>
           </Link>
@@ -30,10 +37,10 @@ export default function TrainingPage() {
             <div
               className={styles.cardImage}
               style={{ backgroundImage: `url(${logo})` }}
-
             />
             <div className={styles.cardTitle}>Photo Studio App Training</div>
           </Link>
+
           <Link href="/training/facebook-ads" className={styles.trainingCard}>
             <div
               className={styles.cardImage}
@@ -41,6 +48,7 @@ export default function TrainingPage() {
             />
             <div className={styles.cardTitle}>Facebook Ads</div>
           </Link>
+
           <Link href="/training/business-leadership" className={styles.trainingCard}>
             <div
               className={styles.cardImage}
@@ -64,5 +72,5 @@ export default function TrainingPage() {
         reverse
       />
     </main>
-  )
+  );
 }

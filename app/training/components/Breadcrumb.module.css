@@ -1,0 +1,23 @@
+.breadcrumb {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: #777;
+  }
+  .breadcrumb a {
+    color: #0070f3;
+    text-decoration: none;
+    margin-right: 6px;
+  }
+  .breadcrumb span {
+    margin-right: 6px;
+  }
+  .breadcrumb a::after,
+  .breadcrumb span::after {
+    content: "/";
+    margin-left: 6px;
+    color: #aaa;
+  }
+  .breadcrumb span:last-child::after {
+    content: "";
+  }
+  
