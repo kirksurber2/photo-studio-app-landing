@@ -1,10 +1,10 @@
 import TrainingSection from './components/TrainingSection'
 import Link from 'next/link'
-import styles from './training.module.css' // ✅ make sure this is a default import, not a CSS import
+import styles from './training.module.css' 
 
 export default function TrainingPage() {
   return (
-    <>
+    <main>
       <section className={styles.trainingCategories}>
         <h2 className={styles.sectionTitle}>Explore Training Categories</h2>
         <div className={styles.cardGrid}>
@@ -60,6 +60,6 @@ export default function TrainingPage() {
         description="Watch how we helped real clients achieve their goals."
         reverse
       />
-    </>
+    </main>
   )
 }
