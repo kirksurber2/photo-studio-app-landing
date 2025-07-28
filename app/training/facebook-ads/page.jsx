@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import '../../training.module.css'; // Adjust if using CSS Modules
+import '../training.module.css'; // Adjust if using CSS Modules
 
 export const metadata = {
   title: 'Facebook Ads Training for Photographers | Photo Studio App',
