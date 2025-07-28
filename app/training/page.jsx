@@ -31,6 +31,20 @@ export default function TrainingPage() {
             />
             <div className={styles.cardTitle}>Photo Studio App Training</div>
           </Link>
+          <Link href="/training/facebook-ads" className={styles.trainingCard}>
+            <div
+              className={styles.cardImage}
+              style={{ backgroundImage: `url(/images/training-app.jpg)` }}
+            />
+            <div className={styles.cardTitle}>Facebook Ads</div>
+          </Link>
+          <Link href="/training/business-leadership" className={styles.trainingCard}>
+            <div
+              className={styles.cardImage}
+              style={{ backgroundImage: `url(/images/training-app.jpg)` }}
+            />
+            <div className={styles.cardTitle}>Business Leadership</div>
+          </Link>
         </div>
       </section>
 

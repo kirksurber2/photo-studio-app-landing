@@ -29,11 +29,8 @@ export default function Navbar() {
         <span className={styles.dropdownTitle}>Training & Education</span>
         {showDropdown && (
           <div className={styles.dropdownMenu}>
-            <Link href='/photography-training-and-education'>Overview</Link>
-            <Link href='/learn-photography'>Learn: Photography</Link>
-            <Link href='/learn-photography-business'>Learn: Business</Link>
-            <Link href='/learn-facebook'>Learn: Facebook Ads</Link>
-            <Link href='/business-leadership'>Business Leadership</Link>
+            <Link href='/photography-training-and-education'>Training and Education</Link>
+            
           </div>
         )}
       </div>
