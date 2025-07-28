@@ -1,5 +1,5 @@
-import Breadcrumb from "@/components/Breadcrumb"; // We'll create this
-import "../../facebookAds.css"; // Optional: dedicated or shared styles
+import Breadcrumb from "@/components/Breadcrumb";
+import styles from "../../training.module.css";
 
 export const metadata = {
   title: "Why Start with Facebook Ads | Photo Studio App Training",
@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function WhyStartWithFacebookAds() {
   return (
-    <main className="training-section">
+    <main className={styles.trainingSection}>
       <Breadcrumb
         paths={[
           { name: "Home", href: "/" },
@@ -21,7 +21,7 @@ export default function WhyStartWithFacebookAds() {
 
       <h1>Why Start with Facebook Ads</h1>
 
-      <div className="video-container">
+      <div className={styles.videoContainer}>
         <iframe
           width="100%"
           height="400"
@@ -32,7 +32,7 @@ export default function WhyStartWithFacebookAds() {
         />
       </div>
 
-      <div className="text-block">
+      <div className={styles.textBlock}>
         <p>Facebook Ads are one of the lowest-cost marketing tools available today.</p>
         <p>Unlike traditional advertising, you can start with just a few dollars a day and still see measurable results.</p>
 
@@ -46,11 +46,10 @@ export default function WhyStartWithFacebookAds() {
         <p>As a photographer, you don’t have to guess. Facebook lets you reach exactly the kind of client you want, and it tells you how your ad is performing in real-time.</p>
       </div>
 
-      <section className="downloads-section">
+      <section className={styles.downloadsSection}>
         <h2>Available Downloads</h2>
         <ul>
-          <li><a href="/downloads/facebook-intro-guide.pdf" target="_blank">Facebook Ads Intro Guide (PDF)</a></li>
-          {/* Add more downloads as needed */}
+          <li><a href="/downloads/facebook-intro-guide.pdf" target="_blank" rel="noopener noreferrer">Facebook Ads Intro Guide (PDF)</a></li>
         </ul>
       </section>
     </main>
