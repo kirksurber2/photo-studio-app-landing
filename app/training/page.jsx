@@ -1,8 +1,9 @@
 import TrainingSection from './components/TrainingSection';
 import Link from 'next/link';
 import logo from '../../assets/images/images/logoBlack-250.png';
-import calendar from '../../assets/images/images/calendar.png'; // <-- Make sure this is correct
+import calendar from '../../assets/images/images/calendar.jpg'; // <-- Make sure this is correct
 import styles from './training.module.css';
+import { FaFacebook } from "react-icons/fa6";
 
 // SEO Metadata
 export const metadata = {
@@ -44,7 +45,7 @@ export default function TrainingPage() {
           <Link href="/training/facebook-ads" className={styles.trainingCard}>
             <div
               className={styles.cardImage}
-              style={{ backgroundImage: `url(/images/training-app.jpg)` }}
+              style={{ backgroundImage: `url(${<FaFacebook/>})` }}
             />
             <div className={styles.cardTitle}>Facebook Ads</div>
           </Link>
