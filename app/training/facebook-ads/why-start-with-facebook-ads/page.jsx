@@ -1,4 +1,4 @@
-import Breadcrumb from "@/components/Breadcrumb";
+import Breadcrumb from "../../components/Breadcrumb";
 import styles from "../../training.module.css";
 
 export const metadata = {
