@@ -1,5 +1,6 @@
 import Breadcrumb from "../../components/Breadcrumb";
 import styles from "../../training.module.css";
+import TrainingSection from '../../components/TrainingSection'
 
 export const metadata = {
   title: "Why Start with Facebook Ads | Photo Studio App Training",

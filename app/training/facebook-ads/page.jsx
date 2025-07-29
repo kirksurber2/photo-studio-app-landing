@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import '../training.module.css'; // Adjust if using CSS Modules
-
+import TrainingSection from '../components/TrainingSection'
 export const metadata = {
   title: 'Facebook Ads Training for Photographers | Photo Studio App',
   description:
@@ -33,16 +33,18 @@ export default function FacebookAdsTrainingPage() {
         </p>
 
         <div className="cardGrid">
-          {adSections.map((section, idx) => (
-            <Link href={section.link} key={idx} className="trainingCard">
-              <div
-                className="cardImage"
-                style={{
-                  backgroundImage: `url(/images/training-facebook-ads.jpg)`
-                }}
-              />
-              <div className="cardTitle">{section.title}</div>
+          {adSections.map((item, index) => (
+            <>
+            <Link href={section.link} key={index} className="trainingCard">
+              <TrainingSection 
+                url={item.url}
+                title={item.title}
+                description = {item.description}
+                reverse = {false}
+                index={index}
+                />
             </Link>
+            </>
           ))}
         </div>
       </section>
