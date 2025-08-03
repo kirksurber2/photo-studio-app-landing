@@ -123,14 +123,20 @@ export default function PricingTool() {
   };
 
   // Calculate package total cost
-  const calculatePackageMetrics = (packageItems) => {
+  const calculatePackageValue = (packageItems) => {
+    const totalValue = packageItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    return totalValue;
+  };
+
+  // Calculate package total product cost (lab costs)
+  const calculatePackageCost = (packageItems) => {
     const totalCost = packageItems.reduce((sum, item) => sum + (item.cost * item.quantity), 0);
     return totalCost;
   };
 
   // Get margin color based on percentage
   const getMarginColor = (packagePrice, totalCost) => {
-    if (totalCost === 0) return 'gray';
+    if (packagePrice === 0 || totalCost === 0) return 'gray';
     const marginPercentage = (totalCost / packagePrice) * 100;
     
     if (marginPercentage <= 15) return 'green';
@@ -229,9 +235,10 @@ export default function PricingTool() {
           {/* Packages Section */}
           <div className={styles.packagesSection}>
             {packages.map((pkg) => {
-              const totalCost = calculatePackageMetrics(pkg.items);
+              const totalValue = calculatePackageValue(pkg.items);
+              const totalCost = calculatePackageCost(pkg.items);
               const marginColor = getMarginColor(pkg.price, totalCost);
-              const marginPercentage = totalCost > 0 ? ((totalCost / pkg.price) * 100).toFixed(1) : 0;
+              const marginPercentage = pkg.price > 0 && totalCost > 0 ? ((totalCost / pkg.price) * 100).toFixed(1) : 0;
               
               return (
                 <div key={pkg.id} className={styles.packageCard}>
@@ -262,29 +269,24 @@ export default function PricingTool() {
                         ) : (
                           <div className={styles.packageItems}>
                             {pkg.items.map((item) => (
-                              <div key={`${pkg.id}-${item.id}`} className={styles.packageItem}>
-                                <div className={styles.packageItemContent}>
-                                  <h5 className={styles.packageItemName}>{item.name}</h5>
-                                  <p className={styles.packageItemCost}>
-                                    ${item.cost.toFixed(2)} × {item.quantity} = ${(item.cost * item.quantity).toFixed(2)}
-                                  </p>
-                                </div>
-                                <div className={styles.packageItemActions}>
-                                  <input
-                                    type="number"
-                                    value={item.quantity}
-                                    onChange={(e) => updatePackageItemQuantity(pkg.id, item.id, e.target.value)}
-                                    className={styles.quantityInput}
-                                    min="1"
-                                    placeholder="Qty"
-                                  />
-                                  <button
-                                    onClick={() => removeFromPackage(pkg.id, item.id)}
-                                    className={styles.removeButton}
-                                  >
-                                    <Trash2 size={12} />
-                                  </button>
-                                </div>
+                              <div key={`${pkg.id}-${item.id}`} className={styles.packageItemRow}>
+                                <span className={styles.packageItemName}>{item.name}</span>
+                                <span className={styles.packageItemPrice}>${item.price.toFixed(2)}</span>
+                                <input
+                                  type="number"
+                                  value={item.quantity}
+                                  onChange={(e) => updatePackageItemQuantity(pkg.id, item.id, e.target.value)}
+                                  className={styles.quantityInput}
+                                  min="1"
+                                  placeholder="Qty"
+                                />
+                                <span className={styles.packageItemTotal}>${(item.price * item.quantity).toFixed(2)}</span>
+                                <button
+                                  onClick={() => removeFromPackage(pkg.id, item.id)}
+                                  className={styles.packageRemoveButton}
+                                >
+                                  <Trash2 size={10} />
+                                </button>
                               </div>
                             ))}
                           </div>
@@ -301,6 +303,11 @@ export default function PricingTool() {
                     </div>
                     
                     <div className={styles.summaryRow}>
+                      <span className={styles.summaryLabel}>Total Package Value:</span>
+                      <span className={styles.summaryValue}>${totalValue.toFixed(2)}</span>
+                    </div>
+                    
+                    <div className={styles.summaryRow}>
                       <span className={styles.summaryLabel}>Package Price:</span>
                       <input
                         type="number"
@@ -312,7 +319,7 @@ export default function PricingTool() {
                       />
                     </div>
                     
-                    {pkg.price > 0 && (
+                    {pkg.price > 0 && totalCost > 0 && (
                       <div className={`${styles.marginAnalysis} ${styles[marginColor]}`}>
                         <div className={styles.marginHeader}>
                           <span className={styles.marginLabel}>Margin Analysis:</span>

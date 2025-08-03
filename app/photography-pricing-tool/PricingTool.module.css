@@ -336,41 +336,42 @@
     gap: 0.75rem;
   }
   
-  .packageItem {
+  .packageItemRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
     background: white;
     border-radius: 8px;
     padding: 0.75rem;
     box-shadow: rgba(51, 92, 103, 0.08) 3px 3px 8px,
                 rgba(255, 255, 255, 1) -3px -3px 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .packageItemContent {
-    flex: 1;
   }
   
   .packageItemName {
+    flex: 1;
     font-size: 0.9rem;
     font-weight: 600;
     color: #3c3c3c;
-    margin-bottom: 0.25rem;
   }
   
-  .packageItemCost {
+  .packageItemPrice {
     font-size: 0.8rem;
     color: #666;
+    min-width: 60px;
+    text-align: right;
   }
   
-  .packageItemActions {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  .packageItemTotal {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #3c3c3c;
+    min-width: 60px;
+    text-align: right;
   }
   
   .quantityInput {
-    width: 60px;
+    width: 50px;
     padding: 0.25rem;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -378,7 +379,7 @@
     text-align: center;
   }
   
-  .removeButton {
+  .packageRemoveButton {
     background: none;
     border: none;
     color: #ef4444;
@@ -386,9 +387,14 @@
     padding: 0.25rem;
     border-radius: 4px;
     transition: all 0.2s ease;
+    max-width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
-  .removeButton:hover {
+  .packageRemoveButton:hover {
     background: rgba(239, 68, 68, 0.1);
   }
   
