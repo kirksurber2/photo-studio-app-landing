@@ -2,113 +2,133 @@ import Link from 'next/link';
 import styles from '../training.module.css';
 
 export const metadata = {
-  title: 'Photography Business Training | Photo Studio App',
-  description: 'Complete guide to starting and growing a successful photography business. Learn pricing, marketing, client management, legal requirements, and scaling strategies.',
-  keywords: 'photography business, start photography business, photography pricing, photography marketing, photography contracts, photography business plan'
+  title: 'Photography Training | Photo Studio App',
+  description: 'Comprehensive photography training covering posing, lighting, composition, and technical skills. Master the art of professional photography.',
+  keywords: 'photography training, posing techniques, lighting setup, composition rules, camera settings, portrait photography, professional photography'
 };
 
-const businessSections = [
+const photographySections = [
   { 
-    title: "How to Start a Photography Business: Step by Step", 
-    link: "/training/photography-business/how-to-start-a-photography-business",
-    description: "Complete roadmap to launching your photography business from scratch",
-    duration: "35 min",
+    title: "Camera Fundamentals", 
+    link: "/training/photography/camera-fundamentals",
+    description: "Master your camera settings, exposure triangle, and technical basics",
+    duration: "25 min",
     level: "Beginner"
   },
   { 
-    title: "Photography Pricing Strategies", 
-    link: "/training/photography-business/pricing-strategies",
-    description: "Master pricing psychology and create profitable package structures",
+    title: "Composition Rules", 
+    link: "/training/photography/composition-rules",
+    description: "Learn the rule of thirds, leading lines, and visual balance",
+    duration: "20 min",
+    level: "Beginner"
+  },
+  { 
+    title: "Natural Light Photography", 
+    link: "/training/photography/natural-light",
+    description: "Work with available light for stunning portraits",
+    duration: "30 min",
+    level: "Beginner"
+  },
+  { 
+    title: "Studio Lighting Setup", 
+    link: "/training/photography/studio-lighting",
+    description: "Professional lighting techniques and equipment setup",
+    duration: "35 min",
+    level: "Intermediate"
+  },
+  { 
+    title: "Posing Women", 
+    link: "/training/photography/posing-women",
+    description: "Flattering poses and techniques for female subjects",
     duration: "28 min",
     level: "Intermediate"
   },
   { 
-    title: "Building Your Photography Portfolio", 
-    link: "/training/photography-business/build-portfolio",
-    description: "Create a compelling portfolio that attracts your ideal clients",
+    title: "Posing Men", 
+    link: "/training/photography/posing-men",
+    description: "Confident and natural poses for male subjects",
     duration: "22 min",
-    level: "Beginner"
+    level: "Intermediate"
   },
   { 
-    title: "Photography Marketing Fundamentals", 
-    link: "/training/photography-business/marketing-fundamentals",
-    description: "Essential marketing strategies to grow your photography business",
+    title: "Family Photography", 
+    link: "/training/photography/family-photography",
+    description: "Group posing and family portrait techniques",
     duration: "32 min",
+    level: "Intermediate"
+  },
+  { 
+    title: "Children's Photography", 
+    link: "/training/photography/children-photography",
+    description: "Capture authentic moments with young subjects",
+    duration: "26 min",
+    level: "Advanced"
+  },
+  { 
+    title: "Wedding Photography Basics", 
+    link: "/training/photography/wedding-basics",
+    description: "Essential techniques for wedding photography",
+    duration: "40 min",
+    level: "Advanced"
+  },
+  { 
+    title: "Post-Processing Workflow", 
+    link: "/training/photography/post-processing",
+    description: "Lightroom and Photoshop editing techniques",
+    duration: "45 min",
+    level: "Intermediate"
+  },
+  { 
+    title: "Color Theory & Styling", 
+    link: "/training/photography/color-theory",
+    description: "Understanding color relationships and styling choices",
+    duration: "24 min",
+    level: "Advanced"
+  },
+  { 
+    title: "Client Direction & Communication", 
+    link: "/training/photography/client-direction",
+    description: "Guide clients for natural expressions and poses",
+    duration: "18 min",
     level: "Intermediate"
   }
 ];
 
 const comingSoonSections = [
   { 
-    title: "Photography Website Essentials", 
-    description: "Build a professional website that converts visitors into clients",
-    duration: "25 min",
-    level: "Beginner"
-  },
-  { 
-    title: "Client Consultation & Sales Process", 
-    description: "Master the art of client consultations and closing sales",
-    duration: "30 min",
-    level: "Intermediate"
-  },
-  { 
-    title: "Photography Contracts & Legal Protection", 
-    description: "Protect your business with proper contracts and legal frameworks",
-    duration: "24 min",
-    level: "Intermediate"
-  },
-  { 
-    title: "Social Media Marketing for Photographers", 
-    description: "Leverage Instagram, Facebook, and TikTok to grow your business",
-    duration: "28 min",
-    level: "Intermediate"
-  },
-  { 
-    title: "Client Experience & Retention", 
-    description: "Create exceptional client experiences that generate referrals",
-    duration: "26 min",
+    title: "Advanced Portrait Retouching", 
+    description: "Professional skin retouching and beauty enhancement techniques",
+    duration: "35 min",
     level: "Advanced"
   },
   { 
-    title: "Photography Business Finances", 
-    description: "Manage cash flow, taxes, and financial planning for photographers",
-    duration: "33 min",
-    level: "Intermediate"
+    title: "Commercial Photography", 
+    description: "Product photography and commercial lighting setups",
+    duration: "42 min",
+    level: "Advanced"
   },
   { 
-    title: "Scaling Your Photography Business", 
-    description: "Strategies to grow from solo photographer to photography studio",
+    title: "Event Photography Mastery", 
+    description: "Capture memorable moments at weddings and events",
     duration: "38 min",
-    level: "Advanced"
-  },
-  { 
-    title: "Photography Equipment Investment Strategy", 
-    description: "Smart equipment purchasing decisions that maximize ROI",
-    duration: "20 min",
-    level: "Beginner"
-  },
-  { 
-    title: "Networking & Partnership Building", 
-    description: "Build valuable relationships with vendors and other professionals",
-    duration: "22 min",
     level: "Intermediate"
   },
   { 
-    title: "Photography Business Insurance & Protection", 
-    description: "Essential insurance coverage and risk management strategies",
-    duration: "18 min",
-    level: "Intermediate"
-  },
-  { 
-    title: "Seasonal Business Planning", 
-    description: "Navigate busy and slow seasons with strategic planning",
-    duration: "24 min",
+    title: "Fine Art Photography", 
+    description: "Creative techniques for artistic expression",
+    duration: "45 min",
     level: "Advanced"
   },
   { 
-    title: "Photography Niche Specialization", 
-    description: "Find and dominate your photography niche market",
-    duration: "27 min",
+    title: "Photography Business", 
+    description: "Building and scaling your photography business",
+    duration: "50 min",
+    level: "Intermediate"
+  },
+  { 
+    title: "Advanced Lighting Techniques", 
+    description: "Complex multi-light setups and creative lighting",
+    duration: "40 min",
     level: "Advanced"
   }
 ];
@@ -122,29 +142,29 @@ const getLevelColor = (level) => {
   }
 };
 
-export default function PhotographyBusinessPage() {
+export default function PhotographyTrainingPage() {
   return (
-    <main className={styles.trainingCategoryPage}>
+    <div className={styles.trainingCategoryPage}>
       {/* Header Section */}
       <section className={styles.categoryHeader}>
         <div className={styles.container}>
           <div className={styles.breadcrumb}>
             <Link href="/training" className={styles.breadcrumbLink}>Training</Link>
             <span className={styles.breadcrumbSeparator}>/</span>
-            <span className={styles.breadcrumbCurrent}>Photography Business</span>
+            <span className={styles.breadcrumbCurrent}>Photography</span>
           </div>
           
           <div className={styles.categoryIntro}>
-            <div className={styles.categoryIcon}>💼</div>
-            <h1 className={styles.categoryTitle}>Photography Business Training</h1>
+            <div className={styles.categoryIcon}>📸</div>
+            <h1 className={styles.categoryTitle}>Photography Training</h1>
             <p className={styles.categoryDescription}>
-              Transform your photography passion into a thriving business. Learn everything from startup basics 
-              to advanced scaling strategies, pricing psychology, and client management systems.
+              Master the art of professional photography with comprehensive training covering technical skills, 
+              creative techniques, and client management. From camera basics to advanced posing and lighting.
             </p>
             
             <div className={styles.categoryStats}>
               <div className={styles.statItem}>
-                <span className={styles.statNumber}>{businessSections.length}</span>
+                <span className={styles.statNumber}>{photographySections.length}</span>
                 <span className={styles.statLabel}>Available Now</span>
               </div>
               <div className={styles.statItem}>
@@ -152,7 +172,7 @@ export default function PhotographyBusinessPage() {
                 <span className={styles.statLabel}>Coming Soon</span>
               </div>
               <div className={styles.statItem}>
-                <span className={styles.statNumber}>7.5h</span>
+                <span className={styles.statNumber}>5.5h</span>
                 <span className={styles.statLabel}>Total Duration</span>
               </div>
               <div className={styles.statItem}>
@@ -164,18 +184,18 @@ export default function PhotographyBusinessPage() {
         </div>
       </section>
 
-      {/* Available Lessons */}
+      {/* Training Sections */}
       <section className={styles.trainingLessons}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Available Lessons</h2>
             <p className={styles.sectionDescription}>
-              Start building your photography business with these foundational courses
+              Start learning with these comprehensive photography training modules
             </p>
           </div>
           
           <div className={styles.lessonsGrid}>
-            {businessSections.map((section, index) => (
+            {photographySections.map((section, index) => (
               <Link href={section.link} key={index} className={styles.lessonCard}>
                 <div className={styles.lessonNumber}>
                   {String(index + 1).padStart(2, '0')}
@@ -206,13 +226,13 @@ export default function PhotographyBusinessPage() {
         </div>
       </section>
 
-      {/* Coming Soon Section */}
+      {/* Coming Soon Sections */}
       <section className={styles.comingSoonSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Coming Soon</h2>
             <p className={styles.sectionDescription}>
-              Advanced business training modules currently in production
+              More advanced training modules currently in production
             </p>
           </div>
           
@@ -220,7 +240,7 @@ export default function PhotographyBusinessPage() {
             {comingSoonSections.map((section, index) => (
               <div key={index} className={`${styles.lessonCard} ${styles.comingSoonCard}`}>
                 <div className={styles.lessonNumber}>
-                  {String(businessSections.length + index + 1).padStart(2, '0')}
+                  {String(photographySections.length + index + 1).padStart(2, '0')}
                 </div>
                 <div className={styles.lessonContent}>
                   <div className={styles.lessonHeader}>
@@ -245,6 +265,6 @@ export default function PhotographyBusinessPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
