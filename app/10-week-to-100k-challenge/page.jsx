@@ -1,7 +1,7 @@
 'use client'
 import Head from "next/head";
 import { useMemo, useState } from "react";
-import styles from "../styles/FallPlan.module.css";
+import styles from "./FallPlan.module.css";
 
 export default function FallPlanPage() {
   // --- Calculator state ---
