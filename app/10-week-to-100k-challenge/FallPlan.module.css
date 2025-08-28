@@ -1,4 +1,5 @@
-:root{
+/* Scope vars to the page container instead of :root to keep the module "pure" */
+.page{
     --bg: #0b0f1a;
     --txt: #e8ecf7;
     --muted: #b7c0d6;
@@ -8,17 +9,17 @@
     --glass-strong: rgba(255,255,255,0.14);
     --shadow: 0 10px 30px rgba(0,0,0,0.35);
     --radius: 18px;
-  }
   
-  * { box-sizing: border-box; }
-  html, body { padding:0; margin:0; background: var(--bg); color: var(--txt); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; }
-  a { color: inherit; text-decoration: none; }
-  
-  .page{
     position: relative;
     min-height: 100vh;
     overflow-x: hidden;
+    background: var(--bg);
+    color: var(--txt);
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
   }
+  
+  /* If you want link styles, keep them scoped too */
+  .page a { color: inherit; text-decoration: none; }
   
   /* Background layers */
   .bgGradient{
@@ -47,9 +48,7 @@
     margin: 0 auto;
   }
   
-  .hero{
-    padding-top: 96px;
-  }
+  .hero{ padding-top: 96px; }
   .heroContent{
     text-align: center;
     display: grid;
@@ -128,10 +127,7 @@
     gap: 16px;
     margin: 16px 0 12px;
   }
-  .field{
-    display: grid; gap: 8px;
-    font-weight: 600;
-  }
+  .field{ display: grid; gap: 8px; font-weight: 600; }
   .field input{
     width: 100%;
     padding: 12px 14px;
