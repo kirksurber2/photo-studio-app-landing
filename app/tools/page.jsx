@@ -18,48 +18,48 @@ const tools = [
     status: "Available",
     gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
   },
-  {
-    id: 3,
-    title: "Client Management System",
-    description: "Organize and manage your photography clients with contracts, schedules, and communications.",
-    status: "Coming Soon",
-    gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
-  },
-  {
-    id: 4,
-    title: "Revenue Analytics",
-    description: "Track your photography business revenue with detailed charts and growth insights.",
-    status: "Coming Soon", 
-    gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
-  },
-  {
-    id: 5,
-    title: "Contract Generator",
-    description: "Create professional photography contracts and agreements with automated templates.",
-    status: "Coming Soon",
-    gradient: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
-  },
-  {
-    id: 6,
-    title: "Session Planner",
-    description: "Plan and coordinate photo sessions with clients, locations, and equipment tracking.",
-    status: "Coming Soon",
-    gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)"
-  },
-  {
-    id: 7,
-    title: "Expense Tracker",
-    description: "Monitor business expenses and calculate tax deductions for photography equipment.",
-    status: "Coming Soon",
-    gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"
-  },
-  {
-    id: 8,
-    title: "Portfolio Builder",
-    description: "Create stunning online portfolios to showcase your photography work to potential clients.",
-    status: "Coming Soon",
-    gradient: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
-  }
+//   {
+//     id: 3,
+//     title: "Client Management System",
+//     description: "Organize and manage your photography clients with contracts, schedules, and communications.",
+//     status: "Coming Soon",
+//     gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
+//   },
+//   {
+//     id: 4,
+//     title: "Revenue Analytics",
+//     description: "Track your photography business revenue with detailed charts and growth insights.",
+//     status: "Coming Soon", 
+//     gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
+//   },
+//   {
+//     id: 5,
+//     title: "Contract Generator",
+//     description: "Create professional photography contracts and agreements with automated templates.",
+//     status: "Coming Soon",
+//     gradient: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+//   },
+//   {
+//     id: 6,
+//     title: "Session Planner",
+//     description: "Plan and coordinate photo sessions with clients, locations, and equipment tracking.",
+//     status: "Coming Soon",
+//     gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)"
+//   },
+//   {
+//     id: 7,
+//     title: "Expense Tracker",
+//     description: "Monitor business expenses and calculate tax deductions for photography equipment.",
+//     status: "Coming Soon",
+//     gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"
+//   },
+//   {
+//     id: 8,
+//     title: "Portfolio Builder",
+//     description: "Create stunning online portfolios to showcase your photography work to potential clients.",
+//     status: "Coming Soon",
+//     gradient: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+//   }
 ];
 
 export default function PhotographyToolsPage() {
