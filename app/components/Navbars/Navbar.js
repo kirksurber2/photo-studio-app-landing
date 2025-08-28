@@ -168,9 +168,7 @@ export default function Navbar() {
               <Link href='/features' className={styles.mobileNavLink} onClick={closeMobileMenu}>
                 Features
               </Link>
-              <Link href='/tools' className={styles.mobileNavLink} onClick={closeMobileMenu}>
-                Tools
-              </Link>
+              
               
 
               {/* Mobile Training Section */}
@@ -208,6 +206,9 @@ export default function Navbar() {
 
               <Link href='/refer-a-friend' className={styles.mobileNavLink} onClick={closeMobileMenu}>
                 Refer a Friend
+              </Link>
+              <Link href='/tools' className={styles.mobileNavLink} onClick={closeMobileMenu}>
+                Tools
               </Link>
             </div>
 
