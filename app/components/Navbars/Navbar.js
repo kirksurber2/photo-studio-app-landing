@@ -168,6 +168,10 @@ export default function Navbar() {
               <Link href='/features' className={styles.mobileNavLink} onClick={closeMobileMenu}>
                 Features
               </Link>
+              <Link href='/tools' className={styles.mobileNavLink} onClick={closeMobileMenu}>
+                Tools
+              </Link>
+              
 
               {/* Mobile Training Section */}
               <div className={styles.mobileTrainingSection}>
@@ -222,7 +226,7 @@ export default function Navbar() {
                 className={styles.mobileCtaBtn}
                 onClick={closeMobileMenu}
               >
-                Get Started Free
+                Get Started
               </Link>
             </div>
           </div>
