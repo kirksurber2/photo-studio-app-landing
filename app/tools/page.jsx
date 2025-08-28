@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import '../global.css'
+import '../globals.css'
 
 const tools = [
   {
@@ -17,7 +17,7 @@ const tools = [
     description: "Set and track your photography business goals with smart analytics and projections.",
     status: "Available",
     gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
-  },
+  }
 //   {
 //     id: 3,
 //     title: "Client Management System",
