@@ -1,3 +1,4 @@
+'use client'
 import Head from "next/head";
 import { useMemo, useState } from "react";
 import styles from "../styles/FallPlan.module.css";
