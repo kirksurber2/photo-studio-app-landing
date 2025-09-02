@@ -7,7 +7,7 @@ export const metadata = {
   keywords: 'facebook ads for photographers, photography marketing, facebook ad training, retargeting photography clients, photography ad campaigns'
 };
 
-const adSections = [
+const activeFacebookAdsSections = [
   { 
     title: "Facebook Ads: Overview", 
     link: "/training/facebook-ads/overview",
@@ -87,6 +87,93 @@ const adSections = [
   }
 ];
 
+const comingSoonFacebookAdsSections = [
+  { 
+    title: "Instagram Ads Integration", 
+    description: "Leverage Instagram's visual platform for photography marketing",
+    duration: "22 min",
+    level: "Intermediate"
+  },
+  { 
+    title: "Video Ads for Photographers", 
+    description: "Create compelling video content that converts",
+    duration: "28 min",
+    level: "Advanced"
+  },
+  { 
+    title: "Carousel Ads & Showcase Galleries", 
+    description: "Display multiple photos in engaging carousel formats",
+    duration: "18 min",
+    level: "Intermediate"
+  },
+  { 
+    title: "Lead Generation Campaigns", 
+    description: "Capture leads directly through Facebook forms",
+    duration: "25 min",
+    level: "Advanced"
+  },
+  { 
+    title: "Event Promotion Ads", 
+    description: "Promote photography workshops and mini-sessions",
+    duration: "20 min",
+    level: "Intermediate"
+  },
+  { 
+    title: "Seasonal Campaign Strategies", 
+    description: "Maximize bookings during peak photography seasons",
+    duration: "24 min",
+    level: "Advanced"
+  },
+  { 
+    title: "Local Market Targeting", 
+    description: "Dominate your local photography market with geo-targeting",
+    duration: "19 min",
+    level: "Intermediate"
+  },
+  { 
+    title: "Competitor Analysis & Strategy", 
+    description: "Analyze competitor ads and develop winning strategies",
+    duration: "26 min",
+    level: "Advanced"
+  },
+  { 
+    title: "Facebook Pixel Implementation", 
+    description: "Track conversions and optimize for better results",
+    duration: "21 min",
+    level: "Advanced"
+  },
+  { 
+    title: "Custom Audiences & Lookalikes", 
+    description: "Create powerful audience segments for better targeting",
+    duration: "23 min",
+    level: "Advanced"
+  },
+  { 
+    title: "Ad Creative Best Practices", 
+    description: "Design principles for high-converting photography ads",
+    duration: "17 min",
+    level: "Intermediate"
+  },
+  { 
+    title: "ROI Tracking & Attribution", 
+    description: "Measure true return on ad spend and client lifetime value",
+    duration: "29 min",
+    level: "Advanced"
+  },
+  { 
+    title: "Crisis Management & Ad Account Recovery", 
+    description: "Handle ad disapprovals and account restrictions",
+    duration: "16 min",
+    level: "Advanced"
+  },
+  { 
+    title: "Advanced Automation & Rules", 
+    description: "Set up automated rules for hands-off campaign management",
+    duration: "27 min",
+    level: "Advanced"
+  }
+];
+
 const getLevelColor = (level) => {
   switch (level) {
     case 'Beginner': return '#10b981';
@@ -118,11 +205,15 @@ export default function FacebookAdsTrainingPage() {
             
             <div className={styles.categoryStats}>
               <div className={styles.statItem}>
-                <span className={styles.statNumber}>{adSections.length}</span>
-                <span className={styles.statLabel}>Lessons</span>
+                <span className={styles.statNumber}>{activeFacebookAdsSections.length}</span>
+                <span className={styles.statLabel}>Available Now</span>
               </div>
               <div className={styles.statItem}>
-                <span className={styles.statNumber}>4.5h</span>
+                <span className={styles.statNumber}>{comingSoonFacebookAdsSections.length}</span>
+                <span className={styles.statLabel}>Coming Soon</span>
+              </div>
+              <div className={styles.statItem}>
+                <span className={styles.statNumber}>9.5h</span>
                 <span className={styles.statLabel}>Total Duration</span>
               </div>
               <div className={styles.statItem}>
@@ -134,11 +225,18 @@ export default function FacebookAdsTrainingPage() {
         </div>
       </section>
 
-      {/* Training Sections */}
+      {/* Available Lessons */}
       <section className={styles.trainingLessons}>
         <div className={styles.container}>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitle}>Available Lessons</h2>
+            <p className={styles.sectionDescription}>
+              Master Facebook advertising with these comprehensive training modules
+            </p>
+          </div>
+          
           <div className={styles.lessonsGrid}>
-            {adSections.map((section, index) => (
+            {activeFacebookAdsSections.map((section, index) => (
               <Link href={section.link} key={index} className={styles.lessonCard}>
                 <div className={styles.lessonNumber}>
                   {String(index + 1).padStart(2, '0')}
@@ -164,6 +262,46 @@ export default function FacebookAdsTrainingPage() {
                   </svg>
                 </div>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Coming Soon Section */}
+      <section className={styles.comingSoonSection}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitle}>Coming Soon</h2>
+            <p className={styles.sectionDescription}>
+              Advanced Facebook advertising modules currently in production
+            </p>
+          </div>
+          
+          <div className={styles.lessonsGrid}>
+            {comingSoonFacebookAdsSections.map((section, index) => (
+              <div key={index} className={`${styles.lessonCard} ${styles.comingSoonCard}`}>
+                <div className={styles.lessonNumber}>
+                  {String(activeFacebookAdsSections.length + index + 1).padStart(2, '0')}
+                </div>
+                <div className={styles.lessonContent}>
+                  <div className={styles.lessonHeader}>
+                    <h3 className={styles.lessonTitle}>{section.title}</h3>
+                    <div className={styles.lessonMeta}>
+                      <span className={styles.lessonDuration}>{section.duration}</span>
+                      <span 
+                        className={styles.lessonLevel}
+                        style={{ backgroundColor: getLevelColor(section.level) }}
+                      >
+                        {section.level}
+                      </span>
+                    </div>
+                  </div>
+                  <p className={styles.lessonDescription}>{section.description}</p>
+                </div>
+                <div className={styles.comingSoonBadge}>
+                  Coming Soon
+                </div>
+              </div>
             ))}
           </div>
         </div>

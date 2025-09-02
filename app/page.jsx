@@ -298,9 +298,9 @@ export default function HomePage() {
       <section className={styles.ctaSection}>
         <div className={styles.container}>
           <div className={styles.ctaContent}>
-            <h2 className={styles.ctaTitle}>Stay Informed on Our Pre-Launch!</h2>
+            <h2 className={styles.ctaTitle}>Stay Up-To-Date!</h2>
             <p className={styles.ctaDescription}>
-              Be the first to know when we launch and get exclusive early access to our platform
+              Be the first to know when we do updates, create new training, or launch a new tool or product.
             </p>
             <div className={styles.ctaForm}>
               <input 
