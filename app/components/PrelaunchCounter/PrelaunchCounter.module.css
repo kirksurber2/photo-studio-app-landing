@@ -1,6 +1,6 @@
 /* Scene wrapper with your gradient + Inter */
 .scene {
-  min-height: 100vh;
+  min-height: 100px;
   background: linear-gradient(
     135deg,
     rgba(15, 15, 78, 0.95) 0%,
