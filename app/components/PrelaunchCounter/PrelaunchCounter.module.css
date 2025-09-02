@@ -1,0 +1,178 @@
+/* Scene wrapper to host the animated gradient aura */
+.scene {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+/* Animated gradient background aura */
+.aura {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(60% 60% at 30% 30%, #6a9dfd55, transparent 60%),
+              radial-gradient(50% 50% at 70% 70%, #9b6bff55, transparent 60%),
+              radial-gradient(50% 50% at 30% 70%, #00d1ff44, transparent 70%);
+  filter: blur(50px) saturate(140%);
+  animation: auraShift 14s ease-in-out infinite alternate;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes auraShift {
+  0%   { transform: translate3d(0px, 0px, 0) scale(1);   opacity: 0.9; }
+  100% { transform: translate3d(0px, -6px, 0) scale(1.02); opacity: 1; }
+}
+
+/* Glass card */
+.counterWrap {
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 22px;
+  padding: 22px;
+  max-width: 720px;
+
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+
+  color: #f5f7fa;
+  overflow: hidden;
+}
+
+/* Subtle glass reflection strip */
+.reflection {
+  position: absolute;
+  top: 0;
+  left: -20%;
+  width: 140%;
+  height: 60%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(255, 255, 255, 0.07) 45%,
+    rgba(255, 255, 255, 0.00) 100%
+  );
+  transform: translateY(-20px) rotate(-3deg);
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0.2px;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 0.2px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25);
+}
+
+.badgeSold {
+  background: rgba(255, 104, 104, 0.35);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.28);
+}
+
+.leftPill {
+  background: rgba(46, 204, 113, 0.35);
+  color: #eafff2;
+  font-weight: 700;
+  padding: 7px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  white-space: nowrap;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.22);
+}
+
+.progressBar {
+  width: 100%;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+  outline: 1px solid rgba(255,255,255,0.18);
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #6a9dfd, #4361ee);
+  transition: width 600ms cubic-bezier(.22,1,.36,1);
+  box-shadow:
+    0 0 12px rgba(67, 97, 238, 0.75),
+    inset 0 0 12px rgba(255,255,255,0.15);
+}
+
+/* moving glow on top */
+.progressGlow {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(24px 24px at 10% 50%, rgba(255,255,255,0.35), transparent 60%),
+    radial-gradient(24px 24px at 30% 50%, rgba(255,255,255,0.25), transparent 70%),
+    radial-gradient(24px 24px at 60% 50%, rgba(255,255,255,0.2), transparent 70%);
+  mix-blend-mode: screen;
+  animation: glowSlide 3.2s ease-in-out infinite;
+}
+
+@keyframes glowSlide {
+  0%   { transform: translateX(-8%); opacity: .9; }
+  50%  { transform: translateX(12%); opacity: 1;  }
+  100% { transform: translateX(-8%); opacity: .9; }
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #e5eaf0;
+}
+
+.percent { font-weight: 700; }
+
+.refreshHint { opacity: 0.85; }
+
+.error {
+  color: #ffb4a2;
+  font-weight: 700;
+}
+
+.soldOutNote {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255, 197, 140, 0.25);
+  color: #fff3e8;
+  font-size: 13px;
+  line-height: 1.35;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
