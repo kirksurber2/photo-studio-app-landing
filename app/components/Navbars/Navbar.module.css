@@ -30,6 +30,7 @@
   /* Logo */
   .logoLink {
     display: flex;
+    background-color: none;
     align-items: center;
     text-decoration: none;
     transition: transform 0.2s ease;
