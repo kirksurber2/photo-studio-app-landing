@@ -1,18 +1,29 @@
-/* Scene wrapper to host the animated gradient aura */
+/* Scene wrapper with your gradient + Inter */
 .scene {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 15, 78, 0.95) 0%,
+    rgba(18, 70, 152, 0.95) 25%,
+    rgba(15, 15, 78, 0.95) 50%,
+    rgba(150, 18, 109, 0.95) 75%,
+    rgba(15, 15, 78, 0.95) 100%
+  );
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  padding: 24px;
   position: relative;
   display: grid;
   place-items: center;
-  padding: 24px;
 }
 
-/* Animated gradient background aura */
+/* Subtle animated aura using your brand hues */
 .aura {
   position: absolute;
   inset: 0;
-  background: radial-gradient(60% 60% at 30% 30%, #6a9dfd55, transparent 60%),
-              radial-gradient(50% 50% at 70% 70%, #9b6bff55, transparent 60%),
-              radial-gradient(50% 50% at 30% 70%, #00d1ff44, transparent 70%);
+  background:
+    radial-gradient(60% 60% at 30% 30%, rgba(18, 70, 152, 0.35), transparent 60%),
+    radial-gradient(50% 50% at 70% 70%, rgba(150, 18, 109, 0.35), transparent 60%),
+    radial-gradient(50% 50% at 30% 70%, rgba(15, 15, 78, 0.30), transparent 70%);
   filter: blur(50px) saturate(140%);
   animation: auraShift 14s ease-in-out infinite alternate;
   z-index: 0;
@@ -20,8 +31,8 @@
 }
 
 @keyframes auraShift {
-  0%   { transform: translate3d(0px, 0px, 0) scale(1);   opacity: 0.9; }
-  100% { transform: translate3d(0px, -6px, 0) scale(1.02); opacity: 1; }
+  0%   { transform: translate3d(0, 0, 0) scale(1);   opacity: 0.9; }
+  100% { transform: translate3d(0, -6px, 0) scale(1.02); opacity: 1; }
 }
 
 /* Glass card */
@@ -45,7 +56,7 @@
   overflow: hidden;
 }
 
-/* Subtle glass reflection strip */
+/* Glass reflection strip */
 .reflection {
   position: absolute;
   top: 0;
@@ -95,13 +106,13 @@
 }
 
 .badgeSold {
-  background: rgba(255, 104, 104, 0.35);
+  background: rgba(150, 18, 109, 0.45);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.28);
 }
 
 .leftPill {
-  background: rgba(46, 204, 113, 0.35);
-  color: #eafff2;
+  background: rgba(18, 70, 152, 0.35);
+  color: #e6efff;
   font-weight: 700;
   padding: 7px 12px;
   border-radius: 12px;
@@ -110,6 +121,7 @@
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.22);
 }
 
+/* Progress bar tuned to your blue→magenta */
 .progressBar {
   width: 100%;
   height: 14px;
@@ -122,14 +134,14 @@
 
 .progressFill {
   height: 100%;
-  background: linear-gradient(90deg, #6a9dfd, #4361ee);
+  background: linear-gradient(90deg, #124698, #96126d);
   transition: width 600ms cubic-bezier(.22,1,.36,1);
   box-shadow:
-    0 0 12px rgba(67, 97, 238, 0.75),
+    0 0 12px rgba(150, 18, 109, 0.75),
     inset 0 0 12px rgba(255,255,255,0.15);
 }
 
-/* moving glow on top */
+/* Moving glow across the bar */
 .progressGlow {
   pointer-events: none;
   position: absolute;
@@ -162,7 +174,7 @@
 .refreshHint { opacity: 0.85; }
 
 .error {
-  color: #ffb4a2;
+  color: #ffd1e6; /* soft magenta-tinted error */
   font-weight: 700;
 }
 
@@ -170,7 +182,7 @@
   margin-top: 14px;
   padding: 12px 14px;
   border-radius: 12px;
-  background: rgba(255, 197, 140, 0.25);
+  background: rgba(150, 18, 109, 0.25);
   color: #fff3e8;
   font-size: 13px;
   line-height: 1.35;
