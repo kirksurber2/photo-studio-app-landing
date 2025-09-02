@@ -130,12 +130,12 @@ export default function HomePage() {
   return (
     <div className={styles.homepage}>
     <Navbar />
-    <PrelaunchCounter 
-      apiUrl={`${process.env.NEXT_PUBLIC_PRELAUNCH_COUNT_API}/count`}
-      pollMs={15000}
-      fallbackCap={200}
-    />
     <div>Under Construction:  Launching this month!</div>
+      <PrelaunchCounter 
+        apiUrl={`${process.env.NEXT_PUBLIC_PRELAUNCH_COUNT_API}/count`}
+        pollMs={15000}
+        fallbackCap={200}
+      />
       {/* Hero Section */}
       <section className={styles.heroSection}>
         <div className={styles.container}>
