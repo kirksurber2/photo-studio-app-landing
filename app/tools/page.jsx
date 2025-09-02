@@ -133,9 +133,11 @@ export default function PhotographyToolsPage() {
             Join thousands of photographers using our tools to streamline operations, 
             increase profits, and focus on what they love most - creating beautiful images.
           </p>
-          <button className="footer-cta-button">
-            Get Started Today
-          </button>
+          <Link href={"https://app.photostudioapp.com/signup"}>
+            <button className="footer-cta-button">
+              Get Started Today
+            </button>
+          </Link>
         </div>
       </footer>
     </div>
