@@ -130,7 +130,7 @@ export default function Navbar() {
             </Link>
             
             <Link href='/get-started' className={styles.ctaBtn}>
-              Get Started Free
+              Get Started
             </Link>
           </div>
 
