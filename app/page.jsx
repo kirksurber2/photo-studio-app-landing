@@ -131,13 +131,13 @@ export default function HomePage() {
     <div className={styles.homepage}>
     <Navbar />
     
-      <PrelaunchCounter 
-        apiUrl={`${process.env.NEXT_PUBLIC_PRELAUNCH_COUNT_API}/count`}
-        pollMs={15000}
-        fallbackCap={200}
-      />
       {/* Hero Section */}
       <section className={styles.heroSection}>
+        <PrelaunchCounter 
+          apiUrl={`${process.env.NEXT_PUBLIC_PRELAUNCH_COUNT_API}/count`}
+          pollMs={15000}
+          fallbackCap={200}
+        />
         <div className={styles.container}>
           <div className={styles.heroContent}>
             <div className={styles.heroText}>
