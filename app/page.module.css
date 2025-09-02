@@ -1,19 +1,25 @@
-/* ===== Base & Container ===== */
-:root { --content-max: 1000px; }
-
-*,
-*::before,
-*::after { box-sizing: border-box; }
-
-img, video, svg { max-width: 100%; height: auto; display: block; }
 
 .homepage {
+  --content-max: 1000px;           /* moved off :root */
   min-height: 100vh;
   background: #f5f5f5;
 }
 
+/* scope resets to the local wrapper so selectors are pure */
+.homepage *, 
+.homepage *::before, 
+.homepage *::after { box-sizing: border-box; }
+
+.homepage img, 
+.homepage video, 
+.homepage svg { 
+  max-width: 100%; 
+  height: auto; 
+  display: block; 
+}
+
 .container {
-  width: min(100%, var(--content-max));
+  width: min(100%, var(--content-max, 1000px));
   margin: 0 auto;
   padding: 0 1rem;
 }
