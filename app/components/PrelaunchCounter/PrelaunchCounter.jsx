@@ -18,6 +18,7 @@ export default function PrelaunchCounter({
   const [cap, setCap] = useState(null);
   const [error, setError] = useState(null);
   const [isPolling, setIsPolling] = useState(false);
+  const [offline, setOffline] = useState(false)
 
   // animated display values
   const [claimedAnim, setClaimedAnim] = useState(0);
