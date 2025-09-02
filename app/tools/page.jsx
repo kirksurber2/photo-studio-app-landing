@@ -2,6 +2,7 @@
 
 import React from 'react';
 import '../globals.css'
+import Link from 'next/link';
 
 const tools = [
   {
@@ -9,14 +10,16 @@ const tools = [
     title: "Pricing Calculator",
     description: "Calculate optimal pricing for your photography services based on costs, time, and market rates.",
     status: "Available",
-    gradient: "linear-gradient(135deg, #4281a4 0%, #1b264F 100%)"
+    gradient: "linear-gradient(135deg, #4281a4 0%, #1b264F 100%)",
+    url: "/tools/pricing-tool"
   },
   {
     id: 2,
     title: "Business Goal Calculator", 
     description: "Set and track your photography business goals with smart analytics and projections.",
     status: "Available",
-    gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+    gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    url: "/tools/photography-business-goal-calculator"
   }
 //   {
 //     id: 3,
@@ -107,13 +110,14 @@ export default function PhotographyToolsPage() {
                   </div>
                   
                   <p className="tool-description">{tool.description}</p>
-                  
+                  <Link href={tool.url}>
                   <button 
                     className={`tool-button ${tool.status === 'Available' ? 'available' : 'disabled'}`}
                     disabled={tool.status !== 'Available'}
-                  >
+                    >
                     {tool.status === 'Available' ? 'Launch Tool' : 'Coming Soon'}
                   </button>
+                    </Link>
                 </div>
               </div>
             </div>
