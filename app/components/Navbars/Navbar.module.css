@@ -43,6 +43,7 @@
   .logo {
     height: auto;
     width: auto;
+    background-color: none;
   }
   
   /* Desktop Navigation */
