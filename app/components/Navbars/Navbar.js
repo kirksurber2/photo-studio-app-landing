@@ -129,7 +129,7 @@ export default function Navbar() {
               Login
             </Link>
             
-            <Link href='/get-started' className={styles.ctaBtn}>
+            <Link href='https://app.photostudioapp.com/signup' className={styles.ctaBtn}>
               Get Started
             </Link>
           </div>
