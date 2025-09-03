@@ -1,8 +1,8 @@
-:root{
-  --bg: #0c1030;          /* deep navy */
+:global(:root) {
+  --bg: #0c1030;
   --bg2: #121744;
-  --accent: #7209B7;      /* matches your brand hue */
-  --accent2: #3a86ff;     /* cool contrast */
+  --accent: #7209B7;
+  --accent2: #3a86ff;
   --txt: #e9eefb;
   --muted: #a7b0d1;
   --glass: rgba(255,255,255,0.08);
