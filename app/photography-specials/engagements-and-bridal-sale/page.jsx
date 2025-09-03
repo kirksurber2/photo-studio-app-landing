@@ -29,25 +29,25 @@ function useCountdown(targetISO) {
 
 const images = [
   {
-    src: '/photos/engagement-park-dip.jpg',
+    src: 'https://surberphotography.com/wp-content/uploads/2021/06/Engagement-Photography.jpg',
     title: 'Golden Hour Romance',
     caption: 'Editorial engagement, downtown park',
   },
   {
-    src: '/photos/bridal-veil-motion.jpg',
+    src: 'https://surberphotography.com/wp-content/uploads/2020/12/Tavia-and-Jessi-800.jpg',
     title: 'Veil in Motion',
     caption: 'Cinematic bridal portraits',
   },
   {
-    src: '/photos/engagement-rooftop.jpg',
-    title: 'Rooftop Glow',
-    caption: 'City skyline at sunset',
+    src: 'https://surberphotography.com/wp-content/uploads/2021/06/Abdullah-and-Hemsah-800x.jpg',
+    title: '',
+    caption: '',
   },
-  {
-    src: '/photos/bridal-studio.jpg',
-    title: 'Studio Elegance',
-    caption: 'Classic & timeless lighting',
-  },
+  // {
+  //   src: '/photos/bridal-studio.jpg',
+  //   title: 'Studio Elegance',
+  //   caption: 'Classic & timeless lighting',
+  // },
 ];
 
 export default function Page() {
