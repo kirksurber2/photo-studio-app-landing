@@ -15,7 +15,7 @@
   --radius-xl: 28px;
 }
 
-* { box-sizing: border-box }
+
 .page {
   min-height: 100dvh;
   color: var(--ink);
@@ -24,6 +24,7 @@
     radial-gradient(1200px 600px at 110% 10%, rgba(99,102,241,0.18), transparent 60%),
     linear-gradient(135deg, var(--bg) 0%, var(--bg2) 100%);
   overflow-x: hidden;
+  box-sizing: border-box
 }
 
 /* HERO */
