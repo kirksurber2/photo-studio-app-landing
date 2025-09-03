@@ -2,7 +2,7 @@
 
 import React, { useEffect, useMemo, useState } from 'react';
 import styles from './page.module.css';
-
+import GallerySlider from '../components/GallerySlider';
 
 
 const DEADLINE = (() => {
