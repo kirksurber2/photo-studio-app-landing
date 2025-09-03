@@ -40,7 +40,7 @@ export default function Page() {
   };
 
   return (
-    <main className={styles.page}>
+    <main className={`${styles.photographyLanding} ${styles.page}`}>
       {/* Hero */}
       <section className={styles.hero}>
         <div className={styles.navBrand}>
