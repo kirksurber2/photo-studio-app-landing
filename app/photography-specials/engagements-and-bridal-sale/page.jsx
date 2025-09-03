@@ -27,6 +27,29 @@ function useCountdown(targetISO) {
   return { days, hours, minutes, seconds, expired: diff <= 0 };
 }
 
+const images = [
+  {
+    src: '/photos/engagement-park-dip.jpg',
+    title: 'Golden Hour Romance',
+    caption: 'Editorial engagement, downtown park',
+  },
+  {
+    src: '/photos/bridal-veil-motion.jpg',
+    title: 'Veil in Motion',
+    caption: 'Cinematic bridal portraits',
+  },
+  {
+    src: '/photos/engagement-rooftop.jpg',
+    title: 'Rooftop Glow',
+    caption: 'City skyline at sunset',
+  },
+  {
+    src: '/photos/bridal-studio.jpg',
+    title: 'Studio Elegance',
+    caption: 'Classic & timeless lighting',
+  },
+];
+
 export default function Page() {
   const { days, hours, minutes, seconds, expired } = useCountdown(DEADLINE);
   const [form, setForm] = useState({ name: '', email: '', phone: '', sessionType: 'Engagement', notes: '' });
@@ -85,13 +108,14 @@ export default function Page() {
 
       {/* Social proof strip */}
       <section className={styles.pressStrip}>
-        <span>As seen in</span>
-        <div className={styles.pressLogos}>
-          <i>Vogue*</i>
-          <i>BRIDES*</i>
-          <i>Martha Stewart*</i>
-        </div>
-        <small className={styles.pressNote}>*for visual placement—replace with your logos</small>
+       <GallerySlider
+          images={images}
+          aspect="55%"      // tweak for your crops (e.g., "66%" for 3:2)
+          autoplay
+          interval={4200}
+          showDots
+          showArrows
+        />
       </section>
 
       {/* Packages */}
