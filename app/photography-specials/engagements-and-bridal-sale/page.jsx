@@ -1,19 +1,9 @@
-'use client';
+'use client'
 
 import React, { useEffect, useMemo, useState } from 'react';
 import styles from './page.module.css';
 
-export const metadata = {
-  title: '50% Off Engagement & Bridal Sessions | Limited-Time Offer',
-  description:
-    'Elegant engagement & bridal portraits at 50% off. Limited spots. Book your dream session today and create timeless artwork you’ll love forever.',
-  openGraph: {
-    title: '50% Off Engagement & Bridal Sessions',
-    description:
-      'Elegant engagement & bridal portraits at 50% off. Limited spots. Book now.',
-    type: 'website',
-  },
-};
+
 
 const DEADLINE = (() => {
   // set your real deadline here (YYYY-MM-DD)
