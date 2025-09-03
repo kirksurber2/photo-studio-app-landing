@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import GallerySlider from '@/components/GallerySlider';
+import GallerySlider from '../components/GallerySlider';
 import styles from './page.module.css';
 
 export default function Page() {
