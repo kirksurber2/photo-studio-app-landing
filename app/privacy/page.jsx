@@ -1,5 +1,5 @@
 // app/privacy/page.jsx
-'use client';
+
 
 import React from 'react';
 import styles from './Privacy.module.css';
