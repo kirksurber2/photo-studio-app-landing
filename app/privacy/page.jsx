@@ -2,7 +2,7 @@
 
 
 import React from 'react';
-import styles from './Privacy.module.css';
+import styles from './PrivacyPolicy.module.css';
 
 export const metadata = {
   title: 'Privacy Policy | Photo Studio App',
