@@ -274,7 +274,7 @@ export default function PrivacyPage() {
       <section id="children" className={styles.section}>
         <h2>Children</h2>
         <p>
-          The Services are not directed to children under 13 (or the equivalent minimum age in your
+          The Services are not directed to children under 18 (or the equivalent minimum age in your
           jurisdiction). We do not knowingly collect personal data from children. If you believe a
           child has provided personal data, contact us and we will take appropriate steps to remove
           it.
