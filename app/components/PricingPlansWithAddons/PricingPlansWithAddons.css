@@ -1,0 +1,263 @@
+.section {
+  padding: 56px 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 15, 78, 0.95) 0%,
+    rgba(18, 70, 152, 0.95) 25%,
+    rgba(15, 15, 78, 0.95) 50%,
+    rgba(150, 18, 109, 0.95) 75%,
+    rgba(15, 15, 78, 0.95) 100%
+  );
+}
+
+.title {
+  color: #e8ecf7;
+  text-align: center;
+  font-size: clamp(1.4rem, 1.2rem + 1.2vw, 2rem);
+  margin: 0 0 28px;
+  font-weight: 800;
+}
+
+/* Plan cards grid */
+.planGrid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  max-width: 1100px;
+  margin: 0 auto 36px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .planGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 20px;
+  padding: 26px;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  backdrop-filter: blur(12px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 42px rgba(0,0,0,0.4);
+}
+
+.cardHeader {
+  margin-bottom: 12px;
+}
+
+.planTitle {
+  font-weight: 800;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 8px 0 4px;
+}
+
+.emph {
+  color: #00e0ff;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.proPrice {
+  color: #e4e9ff;
+}
+
+.perMonth {
+  color: rgba(255,255,255,0.85);
+  font-weight: 500;
+}
+
+.regularWrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+  color: rgba(255,255,255,0.6);
+  font-weight: 600;
+}
+
+.oldPriceNote {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+}
+
+.usersNote {
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  margin: 4px 0 0;
+}
+
+/* Feature list */
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.featureItem {
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 10px;
+  text-align: left;
+  font-size: 0.98rem;
+  line-height: 1.35rem;
+  color: #f1f4ff;
+}
+
+.bullet { opacity: .7; }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.btn:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.btnPrimary {
+  border: none;
+  background: linear-gradient(135deg, #7209b7, #00e0ff);
+}
+
+/* Badge / Pill */
+.badge {
+  background: rgba(114, 9, 183, 0.22);
+  color: #e9ddff;
+  border: 1px solid rgba(114, 9, 183, 0.42);
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Add-ons */
+.addOns {
+  max-width: 1100px;
+  margin: 10px auto 0;
+}
+
+.subTitle {
+  color: #e8ecf7;
+  text-align: center;
+  font-weight: 800;
+  font-size: clamp(1.1rem, 1rem + .6vw, 1.5rem);
+  margin: 8px 0 18px;
+}
+
+.addOnGrid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+}
+
+@media (max-width: 900px) {
+  .addOnGrid { grid-template-columns: 1fr; }
+}
+
+.addonCard {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.addonHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.addonTitle {
+  margin: 0;
+  font-weight: 800;
+}
+
+.pill {
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  color: #f4f7ff;
+}
+
+.addonDesc {
+  color: #f1f4ff;
+  opacity: .95;
+}
+
+/* Tiers table */
+.tierTable {
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.tierRow {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  gap: 0;
+  padding: 10px 14px;
+  color: #f6f8ff;
+  background: rgba(255,255,255,0.06);
+}
+
+.tierHeader {
+  background: rgba(255,255,255,0.12);
+  font-weight: 800;
+}
+
+.tierRow + .tierRow {
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+/* Variant */
+.compact {
+  padding: 28px 16px;
+}
+
+.compact .planGrid .card,
+.compact .addOnGrid .card {
+  padding: 18px;
+}
