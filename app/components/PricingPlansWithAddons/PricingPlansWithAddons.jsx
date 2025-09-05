@@ -1,55 +1,8 @@
-
+'use client';
 
 import React from 'react';
 import Link from 'next/link';
 import styles from './PricingPlansWithAddOns.module.css';
-
-/**
- * PricingPlansWithAddOns
- *
- * Props:
- * - heading?: string
- * - variant?: "default" | "compact"
- * - starter?: {
- *     title?: string,
- *     launchPrice?: string,
- *     regularPrice?: string,
- *     ctaText?: string,
- *     ctaHref?: string,
- *     usersNote?: string,
- *     features?: string[]
- *   }
- * - pro?: {
- *     title?: string,
- *     price?: string,
- *     ctaText?: string,
- *     ctaHref?: string,
- *     features?: string[]
- *   }
- * - addOns?: {
- *     show?: boolean,
- *     businessLine?: {
- *       title?: string,
- *       description?: string,
- *       priceText?: string,   // e.g. "$9–$15/mo + usage"
- *       ctaText?: string,
- *       ctaHref?: string
- *     },
- *     callTeamTool?: {
- *       title?: string,
- *       description?: string,
- *       overageText?: string, // e.g. "$0.02/min overage"
- *       tiers?: Array<{
- *         name: string,
- *         minutes: number,
- *         estCalls?: number,
- *         price: string
- *       }>,
- *       ctaText?: string,
- *       ctaHref?: string
- *     }
- *   }
- */
 
 export default function PricingPlansWithAddOns({
   heading = 'Compare Plans & Power-Ups',
@@ -104,7 +57,8 @@ export default function PricingPlansWithAddOns({
     show: true,
     businessLine: {
       title: 'Business Line (Single Number)',
-      description: 'Dedicated phone number for calls & SMS, fully integrated with leads and clients.',
+      description:
+        'Dedicated phone number for calls & SMS, fully integrated with leads and clients.',
       priceText: '$9–$15/mo + usage',
       ctaText: 'Add Business Line',
       ctaHref: '/billing/addons?addon=business-line',
@@ -134,8 +88,23 @@ export default function PricingPlansWithAddOns({
     variant === 'compact' ? styles.compact : '',
   ].join(' ');
 
-  const StarterButton = s.ctaHref ? Link : 'button';
-  const ProButton = p.ctaHref ? Link : 'button';
+  const StarterCTA = () =>
+    s.ctaHref ? (
+      <Link href={s.ctaHref} className={styles.btn}>
+        {s.ctaText}
+      </Link>
+    ) : (
+      <button className={styles.btn}>{s.ctaText}</button>
+    );
+
+  const ProCTA = () =>
+    p.ctaHref ? (
+      <Link href={p.ctaHref} className={`${styles.btn} ${styles.btnPrimary}`}>
+        {p.ctaText}
+      </Link>
+    ) : (
+      <button className={`${styles.btn} ${styles.btnPrimary}`}>{p.ctaText}</button>
+    );
 
   return (
     <section className={rootClass} aria-label="Pricing plans and add-ons">
@@ -163,15 +132,15 @@ export default function PricingPlansWithAddOns({
           <ul className={styles.featureList}>
             {s.features.map((f, i) => (
               <li key={`s-${i}`} className={styles.featureItem}>
-                <span className={styles.bullet} aria-hidden>•</span>
+                <span className={styles.bullet} aria-hidden>
+                  •
+                </span>
                 {f}
               </li>
             ))}
           </ul>
 
-          <StarterButton href={s.ctaHref} className={styles.btn}>
-            {s.ctaText}
-          </StarterButton>
+          <StarterCTA />
         </article>
 
         {/* Pro */}
@@ -190,15 +159,15 @@ export default function PricingPlansWithAddOns({
           <ul className={styles.featureList}>
             {p.features.map((f, i) => (
               <li key={`p-${i}`} className={styles.featureItem}>
-                <span className={styles.bullet} aria-hidden>•</span>
+                <span className={styles.bullet} aria-hidden>
+                  •
+                </span>
                 {f}
               </li>
             ))}
           </ul>
 
-          <ProButton href={p.ctaHref} className={`${styles.btn} ${styles.btnPrimary}`}>
-            {p.ctaText}
-          </ProButton>
+          <ProCTA />
         </article>
       </div>
 
@@ -215,9 +184,13 @@ export default function PricingPlansWithAddOns({
                 <span className={styles.pill}>{ao.businessLine.priceText}</span>
               </header>
               <p className={styles.addonDesc}>{ao.businessLine.description}</p>
-              <Link href={ao.businessLine.ctaHref} className={styles.btn}>
-                {ao.businessLine.ctaText}
-              </Link>
+              {ao.businessLine.ctaHref ? (
+                <Link href={ao.businessLine.ctaHref} className={styles.btn}>
+                  {ao.businessLine.ctaText}
+                </Link>
+              ) : (
+                <button className={styles.btn}>{ao.businessLine.ctaText}</button>
+              )}
             </article>
 
             {/* Call Team Tool */}
@@ -245,9 +218,13 @@ export default function PricingPlansWithAddOns({
                 ))}
               </div>
 
-              <Link href={ao.callTeamTool.ctaHref} className={`${styles.btn} ${styles.btnPrimary}`}>
-                {ao.callTeamTool.ctaText}
-              </Link>
+              {ao.callTeamTool.ctaHref ? (
+                <Link href={ao.callTeamTool.ctaHref} className={`${styles.btn} ${styles.btnPrimary}`}>
+                  {ao.callTeamTool.ctaText}
+                </Link>
+              ) : (
+                <button className={`${styles.btn} ${styles.btnPrimary}`}>{ao.callTeamTool.ctaText}</button>
+              )}
             </article>
           </div>
         </div>
