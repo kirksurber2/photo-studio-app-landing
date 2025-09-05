@@ -300,8 +300,8 @@ export default function PrivacyPage() {
         <address>
           Photo Studio App, LLC<br />
           Attn: Privacy<br />
-          123 Example Street, Suite 200<br />
-          Springfield, IL 62701 USA
+          198 Abner Ln.<br />
+          Montgomery, TX 77356 USA
         </address>
       </section>
 
