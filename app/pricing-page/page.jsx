@@ -1,4 +1,5 @@
-import PricingPlansWithAddOns from '../components/PricingPlansWithAddOns/PricingPlansWithAddOns';
+import PricingPlansWithAddOns from "../components/PricingPlansWithAddOns/PricingPlansWithAddons";
+
 
 export default function PricingPage() {
   return (
