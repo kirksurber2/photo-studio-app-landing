@@ -67,7 +67,7 @@ export default function PricingChart() {
             </ul>
             
             <Link href="/signup?plan=starter" className={styles.ctaButton}>
-              Start Free Trial
+              Start Today
             </Link>
           </div>
 
@@ -85,7 +85,7 @@ export default function PricingChart() {
             <ul className={styles.featuresList}>
               <li className={styles.feature}>
                 <span className={styles.checkmark}>✓</span>
-                Unlimited Users & Roles
+                10 Users & Roles
               </li>
               <li className={styles.feature}>
                 <span className={styles.checkmark}>✓</span>

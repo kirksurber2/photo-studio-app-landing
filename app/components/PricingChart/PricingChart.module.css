@@ -50,21 +50,10 @@
 }
 
 .featured {
-  border: 3px solid #667eea;
+  border: 3px solid #3182ce;
   transform: scale(1.02);
   position: relative;
-}
-
-.featured::before {
-  content: '';
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 20px;
-  z-index: -1;
+  background: white;
 }
 
 .badge {
@@ -72,7 +61,7 @@
   top: -15px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #3182ce;
   color: white;
   padding: 8px 24px;
   border-radius: 20px;
@@ -111,10 +100,7 @@
 }
 
 .featuredPrice {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #3182ce;
 }
 
 .period {
@@ -212,15 +198,15 @@
 }
 
 .primaryButton {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #3182ce;
   border-color: transparent;
   color: white;
 }
 
 .primaryButton:hover {
-  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+  background: #2c5aa0;
   transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 12px 35px rgba(49, 130, 206, 0.4);
 }
 
 /* Add-ons Section */
