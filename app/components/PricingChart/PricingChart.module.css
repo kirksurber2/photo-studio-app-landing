@@ -1,0 +1,416 @@
+/* Main Container */
+.pricingSection {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  min-height: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mainTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a202c;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Plans Grid */
+.plansGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+/* Plan Cards */
+.planCard {
+  background: white;
+  border-radius: 20px;
+  padding: 30px 25px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+.planCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.featured {
+  border: 3px solid #667eea;
+  transform: scale(1.02);
+  position: relative;
+}
+
+.featured::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 8px 24px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Plan Header */
+.planHeader {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.planName {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 15px;
+}
+
+.pricing {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #2d3748;
+  line-height: 1;
+}
+
+.featuredPrice {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.period {
+  font-size: 1.25rem;
+  color: #718096;
+  font-weight: 600;
+}
+
+.originalPrice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  color: #a0aec0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.regLabel {
+  background: #f7fafc;
+  color: #718096;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.userNote {
+  color: #718096;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Features List */
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+  flex-grow: 1;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f7fafc;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #4a5568;
+}
+
+.feature:last-child {
+  border-bottom: none;
+}
+
+.checkmark {
+  color: #48bb78;
+  font-weight: 900;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* CTA Buttons */
+.ctaButton {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  background: white;
+  color: #4a5568;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.ctaButton:hover {
+  background: #f7fafc;
+  border-color: #cbd5e0;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: transparent;
+  color: white;
+}
+
+.primaryButton:hover {
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+}
+
+/* Add-ons Section */
+.addonsSection {
+  margin-top: 40px;
+}
+
+.addonsTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 30px;
+}
+
+.addonsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+/* Add-on Cards */
+.addonCard {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  border: 2px solid #f1f5f9;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.addonCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+  border-color: #e2e8f0;
+}
+
+.addonHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.addonName {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0;
+  flex: 1;
+}
+
+.addonPrice {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.addonDescription {
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  flex-grow: 1;
+}
+
+/* Tiers Table */
+.tiersTable {
+  background: #f8fafc;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 20px 0;
+  border: 1px solid #e2e8f0;
+}
+
+.tierHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 12px 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tierRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 12px 15px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #4a5568;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.tierRow:last-child {
+  border-bottom: none;
+}
+
+.tierRow:hover {
+  background: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pricingSection {
+    padding: 30px 15px;
+  }
+  
+  .mainTitle {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+  
+  .plansGrid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+  
+  .featured {
+    transform: none;
+  }
+  
+  .planCard {
+    padding: 25px 20px;
+  }
+  
+  .price {
+    font-size: 2.5rem;
+  }
+  
+  .addonsGrid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .addonHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .tierHeader,
+  .tierRow {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-size: 12px;
+  }
+  
+  .tierHeader div:nth-child(3),
+  .tierHeader div:nth-child(4),
+  .tierRow div:nth-child(3),
+  .tierRow div:nth-child(4) {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 1.75rem;
+  }
+  
+  .planCard {
+    padding: 20px 15px;
+  }
+  
+  .price {
+    font-size: 2rem;
+  }
+  
+  .addonCard {
+    padding: 20px 15px;
+  }
+  
+  .tierHeader,
+  .tierRow {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 8px;
+  }
+}
