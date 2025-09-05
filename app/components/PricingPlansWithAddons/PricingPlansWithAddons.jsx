@@ -132,8 +132,8 @@ export default function PricingPlansWithAddOns({
           <ul className={styles.featureList}>
             {s.features.map((f, i) => (
               <li key={`s-${i}`} className={styles.featureItem}>
-                <span className={styles.bullet} aria-hidden>
-                  •
+                <span className={styles.bullet} aria-hidden="true">
+                  ✓
                 </span>
                 {f}
               </li>
@@ -159,8 +159,8 @@ export default function PricingPlansWithAddOns({
           <ul className={styles.featureList}>
             {p.features.map((f, i) => (
               <li key={`p-${i}`} className={styles.featureItem}>
-                <span className={styles.bullet} aria-hidden>
-                  •
+                <span className={styles.bullet} aria-hidden="true">
+                  ✓
                 </span>
                 {f}
               </li>
